@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C42C6D4D1E1F4A28000F4BBE /* UIColor+BAColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = C42C6D4C1E1F4A28000F4BBE /* UIColor+BAColorChange.m */; };
+		C44A6E1B1E1F913A002FDD68 /* UIColor+BAColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E151E1F913A002FDD68 /* UIColor+BAColorChange.m */; };
+		C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E261E1F939D002FDD68 /* BAHomeVC.m */; };
+		C44A6E291E1F939D002FDD68 /* BAHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44A6E271E1F939D002FDD68 /* BAHomeVC.xib */; };
+		C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E2B1E1F93AD002FDD68 /* BAMeVC.m */; };
+		C44A6E2E1E1F93AD002FDD68 /* BAMeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44A6E2C1E1F93AD002FDD68 /* BAMeVC.xib */; };
+		C44A6E311E1F93F8002FDD68 /* BATabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E301E1F93F8002FDD68 /* BATabBarViewController.m */; };
+		C44A6E381E1F9567002FDD68 /* BABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E371E1F9567002FDD68 /* BABaseViewController.m */; };
+		C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E3A1E1F9626002FDD68 /* BANavigationController.m */; };
+		C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E3D1E1F9661002FDD68 /* BABaseTableViewController.m */; };
+		C44A6E411E1F9896002FDD68 /* BAUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E401E1F9896002FDD68 /* BAUIHelper.m */; };
 		C4D472201E1F472400438D98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4721F1E1F472400438D98 /* main.m */; };
 		C4D472231E1F472400438D98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D472221E1F472400438D98 /* AppDelegate.m */; };
-		C4D472261E1F472400438D98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D472251E1F472400438D98 /* ViewController.m */; };
 		C4D472291E1F472400438D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D472271E1F472400438D98 /* Main.storyboard */; };
 		C4D4722B1E1F472400438D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722A1E1F472400438D98 /* Assets.xcassets */; };
 		C4D4722E1E1F472400438D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */; };
@@ -21,14 +29,29 @@
 		02D1CD00C3BF72A28F70BCE6 /* Pods-BAQMUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAQMUIDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAQMUIDemo/Pods-BAQMUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		63260277B1C0B9ECEC147178 /* Pods-BAQMUIDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAQMUIDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAQMUIDemo/Pods-BAQMUIDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C07FA7485D4F66D719D615E4 /* libPods-BAQMUIDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAQMUIDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C42C6D4B1E1F4A28000F4BBE /* UIColor+BAColorChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BAColorChange.h"; sourceTree = "<group>"; };
-		C42C6D4C1E1F4A28000F4BBE /* UIColor+BAColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BAColorChange.m"; sourceTree = "<group>"; };
+		C44A6E141E1F913A002FDD68 /* UIColor+BAColorChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BAColorChange.h"; sourceTree = "<group>"; };
+		C44A6E151E1F913A002FDD68 /* UIColor+BAColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BAColorChange.m"; sourceTree = "<group>"; };
+		C44A6E1C1E1F919B002FDD68 /* BAQMUI.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAQMUI.pch; sourceTree = "<group>"; };
+		C44A6E251E1F939D002FDD68 /* BAHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAHomeVC.h; sourceTree = "<group>"; };
+		C44A6E261E1F939D002FDD68 /* BAHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAHomeVC.m; sourceTree = "<group>"; };
+		C44A6E271E1F939D002FDD68 /* BAHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAHomeVC.xib; sourceTree = "<group>"; };
+		C44A6E2A1E1F93AD002FDD68 /* BAMeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAMeVC.h; sourceTree = "<group>"; };
+		C44A6E2B1E1F93AD002FDD68 /* BAMeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAMeVC.m; sourceTree = "<group>"; };
+		C44A6E2C1E1F93AD002FDD68 /* BAMeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAMeVC.xib; sourceTree = "<group>"; };
+		C44A6E2F1E1F93F8002FDD68 /* BATabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATabBarViewController.h; sourceTree = "<group>"; };
+		C44A6E301E1F93F8002FDD68 /* BATabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATabBarViewController.m; sourceTree = "<group>"; };
+		C44A6E361E1F9567002FDD68 /* BABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BABaseViewController.h; sourceTree = "<group>"; };
+		C44A6E371E1F9567002FDD68 /* BABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BABaseViewController.m; sourceTree = "<group>"; };
+		C44A6E391E1F9626002FDD68 /* BANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BANavigationController.h; sourceTree = "<group>"; };
+		C44A6E3A1E1F9626002FDD68 /* BANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BANavigationController.m; sourceTree = "<group>"; };
+		C44A6E3C1E1F9661002FDD68 /* BABaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BABaseTableViewController.h; sourceTree = "<group>"; };
+		C44A6E3D1E1F9661002FDD68 /* BABaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BABaseTableViewController.m; sourceTree = "<group>"; };
+		C44A6E3F1E1F9896002FDD68 /* BAUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAUIHelper.h; sourceTree = "<group>"; };
+		C44A6E401E1F9896002FDD68 /* BAUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAUIHelper.m; sourceTree = "<group>"; };
 		C4D4721B1E1F472400438D98 /* BAQMUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAQMUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D4721F1E1F472400438D98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D472211E1F472400438D98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4D472221E1F472400438D98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C4D472241E1F472400438D98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C4D472251E1F472400438D98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C4D472281E1F472400438D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4D4722A1E1F472400438D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D4722D1E1F472400438D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +87,137 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C44A6E131E1F913A002FDD68 /* BACatorgry */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E141E1F913A002FDD68 /* UIColor+BAColorChange.h */,
+				C44A6E151E1F913A002FDD68 /* UIColor+BAColorChange.m */,
+			);
+			path = BACatorgry;
+			sourceTree = "<group>";
+		};
+		C44A6E161E1F913A002FDD68 /* BACode */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E1D1E1F938A002FDD68 /* BAHomeVC */,
+				C44A6E211E1F938A002FDD68 /* BAMeVC */,
+			);
+			path = BACode;
+			sourceTree = "<group>";
+		};
+		C44A6E171E1F913A002FDD68 /* BACommon */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E3F1E1F9896002FDD68 /* BAUIHelper.h */,
+				C44A6E401E1F9896002FDD68 /* BAUIHelper.m */,
+			);
+			path = BACommon;
+			sourceTree = "<group>";
+		};
+		C44A6E181E1F913A002FDD68 /* BALib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BALib;
+			sourceTree = "<group>";
+		};
+		C44A6E191E1F913A002FDD68 /* BAMain */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E2F1E1F93F8002FDD68 /* BATabBarViewController.h */,
+				C44A6E301E1F93F8002FDD68 /* BATabBarViewController.m */,
+			);
+			path = BAMain;
+			sourceTree = "<group>";
+		};
+		C44A6E1A1E1F913A002FDD68 /* BAResources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BAResources;
+			sourceTree = "<group>";
+		};
+		C44A6E1D1E1F938A002FDD68 /* BAHomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E1E1E1F938A002FDD68 /* Controller */,
+				C44A6E1F1E1F938A002FDD68 /* Model */,
+				C44A6E201E1F938A002FDD68 /* View */,
+			);
+			path = BAHomeVC;
+			sourceTree = "<group>";
+		};
+		C44A6E1E1E1F938A002FDD68 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E251E1F939D002FDD68 /* BAHomeVC.h */,
+				C44A6E261E1F939D002FDD68 /* BAHomeVC.m */,
+				C44A6E271E1F939D002FDD68 /* BAHomeVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C44A6E1F1E1F938A002FDD68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C44A6E201E1F938A002FDD68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C44A6E211E1F938A002FDD68 /* BAMeVC */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E221E1F938A002FDD68 /* Controller */,
+				C44A6E231E1F938A002FDD68 /* Model */,
+				C44A6E241E1F938A002FDD68 /* View */,
+			);
+			path = BAMeVC;
+			sourceTree = "<group>";
+		};
+		C44A6E221E1F938A002FDD68 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E2A1E1F93AD002FDD68 /* BAMeVC.h */,
+				C44A6E2B1E1F93AD002FDD68 /* BAMeVC.m */,
+				C44A6E2C1E1F93AD002FDD68 /* BAMeVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C44A6E231E1F938A002FDD68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C44A6E241E1F938A002FDD68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C44A6E351E1F9531002FDD68 /* BABasic */ = {
+			isa = PBXGroup;
+			children = (
+				C44A6E361E1F9567002FDD68 /* BABaseViewController.h */,
+				C44A6E371E1F9567002FDD68 /* BABaseViewController.m */,
+				C44A6E391E1F9626002FDD68 /* BANavigationController.h */,
+				C44A6E3A1E1F9626002FDD68 /* BANavigationController.m */,
+				C44A6E3C1E1F9661002FDD68 /* BABaseTableViewController.h */,
+				C44A6E3D1E1F9661002FDD68 /* BABaseTableViewController.m */,
+			);
+			path = BABasic;
+			sourceTree = "<group>";
+		};
 		C4D472121E1F472400438D98 = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +241,13 @@
 			children = (
 				C4D472211E1F472400438D98 /* AppDelegate.h */,
 				C4D472221E1F472400438D98 /* AppDelegate.m */,
-				C4D472241E1F472400438D98 /* ViewController.h */,
-				C4D472251E1F472400438D98 /* ViewController.m */,
-				C42C6D4B1E1F4A28000F4BBE /* UIColor+BAColorChange.h */,
-				C42C6D4C1E1F4A28000F4BBE /* UIColor+BAColorChange.m */,
-				C4D472271E1F472400438D98 /* Main.storyboard */,
-				C4D4722A1E1F472400438D98 /* Assets.xcassets */,
-				C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */,
-				C4D4722F1E1F472400438D98 /* Info.plist */,
+				C44A6E191E1F913A002FDD68 /* BAMain */,
+				C44A6E161E1F913A002FDD68 /* BACode */,
+				C44A6E351E1F9531002FDD68 /* BABasic */,
+				C44A6E171E1F913A002FDD68 /* BACommon */,
+				C44A6E131E1F913A002FDD68 /* BACatorgry */,
+				C44A6E181E1F913A002FDD68 /* BALib */,
+				C44A6E1A1E1F913A002FDD68 /* BAResources */,
 				C4D4721E1E1F472400438D98 /* Supporting Files */,
 			);
 			path = BAQMUIDemo;
@@ -103,7 +256,12 @@
 		C4D4721E1E1F472400438D98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4D472271E1F472400438D98 /* Main.storyboard */,
+				C4D4722A1E1F472400438D98 /* Assets.xcassets */,
+				C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */,
+				C4D4722F1E1F472400438D98 /* Info.plist */,
 				C4D4721F1E1F472400438D98 /* main.m */,
+				C44A6E1C1E1F919B002FDD68 /* BAQMUI.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,11 +295,13 @@
 		C4D472131E1F472400438D98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BA;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = boaihome;
 				TargetAttributes = {
 					C4D4721A1E1F472400438D98 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5MLEPWQRVD;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -171,6 +331,8 @@
 			files = (
 				C4D4722E1E1F472400438D98 /* LaunchScreen.storyboard in Resources */,
 				C4D4722B1E1F472400438D98 /* Assets.xcassets in Resources */,
+				C44A6E291E1F939D002FDD68 /* BAHomeVC.xib in Resources */,
+				C44A6E2E1E1F93AD002FDD68 /* BAMeVC.xib in Resources */,
 				C4D472291E1F472400438D98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,10 +392,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D472261E1F472400438D98 /* ViewController.m in Sources */,
+				C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */,
+				C44A6E1B1E1F913A002FDD68 /* UIColor+BAColorChange.m in Sources */,
 				C4D472231E1F472400438D98 /* AppDelegate.m in Sources */,
-				C42C6D4D1E1F4A28000F4BBE /* UIColor+BAColorChange.m in Sources */,
+				C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */,
+				C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */,
+				C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */,
+				C44A6E411E1F9896002FDD68 /* BAUIHelper.m in Sources */,
 				C4D472201E1F472400438D98 /* main.m in Sources */,
+				C44A6E311E1F93F8002FDD68 /* BATabBarViewController.m in Sources */,
+				C44A6E381E1F9567002FDD68 /* BABaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +522,8 @@
 			baseConfigurationReference = 02D1CD00C3BF72A28F70BCE6 /* Pods-BAQMUIDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5MLEPWQRVD;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/BAQMUI.pch";
 				INFOPLIST_FILE = BAQMUIDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -367,6 +537,8 @@
 			baseConfigurationReference = 63260277B1C0B9ECEC147178 /* Pods-BAQMUIDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5MLEPWQRVD;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/BAQMUI.pch";
 				INFOPLIST_FILE = BAQMUIDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

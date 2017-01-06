@@ -8,6 +8,16 @@
 
 #import "AppDelegate.h"
 
+#import <QMUITabBarViewController.h>
+#import <QMUINavigationController.h>
+#import <QMUIConfigurationTemplate.h>
+
+#import "BAHomeVC.h"
+#import "BAMeVC.h"
+
+#import "BANavigationController.h"
+#import "BATabBarViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,10 +26,53 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    /*! QMUI的配置 */
+    [self ba_setupQMUI];
+    
     return YES;
 }
 
+#pragma mark - QMUI的配置
+- (void)ba_setupQMUI
+{
+    /*! 启动QMUI的配置模板 */
+    [QMUIConfigurationTemplate setupConfigurationTemplate];
+    
+    /*! 将全局的控件样式渲染出来 */
+    [QMUIConfigurationManager renderGlobalAppearances];
+    
+    /*! 将状态栏设置为希望的样式 */
+    [QMUIHelper renderStatusBarStyleLight];
+    
+    /*! 预加载 QQ 表情，避免第一次使用时卡顿 */
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [QMUIQQEmotionManager emotionsForQQ];
+    });
+    
+    /*! 界面 */
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [self ba_creatTabbarController];
+    
+}
+
+- (void)ba_creatTabbarController
+{
+    BATabBarViewController *tabbarController = [[BATabBarViewController alloc] init];
+    
+    /*! homeVC */
+    BAHomeVC *homeVC = [[BAHomeVC alloc] init];
+    homeVC.hidesBottomBarWhenPushed = NO;
+    BANavigationController *homeNavi = [[BANavigationController alloc] initWithRootViewController:homeVC];
+    homeVC.tabBarItem = [];
+    
+    
+    /*! meVC */
+    
+    
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
