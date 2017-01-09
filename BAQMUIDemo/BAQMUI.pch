@@ -11,13 +11,18 @@
 
 #endif /* BAQMUI_pch */
 
-#indef __OBJC__
+
+#ifdef __OBJC__
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
 #import <QMUIKit/QMUIKit.h>
 
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import <QMUIKit/QMUIKit.h>
+#import "BAUIHelper.h"
 
 #endif
-

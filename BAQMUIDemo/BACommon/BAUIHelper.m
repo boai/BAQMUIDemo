@@ -26,16 +26,14 @@
 + (UITabBarItem *)ba_uiHelper_tabbarItemWithTitle:(NSString *)title
                                             image:(UIImage *)image
                                     selectedImage:(UIImage *)selectedImage
-                                       titleColor:(UIColor *)titleColor
                                selectedTitleColor:(UIColor *)selectedTitleColor
                                               tag:(NSInteger)tag
 {
-    UITabBarItem *tabbarItem = [[UITabBarItem alloc] initWithTitle:title image:image selectedImage:selectedImage];
-    tabbarItem.selectedImage = selectedImage;
-    [tabbarItem setTitleTextAttributes:@{NSFontAttributeName : titleColor} forState:UIControlStateNormal];
-    [tabbarItem setTitleTextAttributes:@{NSFontAttributeName : selectedTitleColor} forState:UIControlStateSelected];
-
-    return tabbarItem;
+    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:image tag:tag];
+    tabBarItem.selectedImage = selectedImage;
+    [tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : selectedTitleColor} forState:UIControlStateSelected];
+    
+    return tabBarItem;
 }
 
 @end

@@ -65,13 +65,19 @@
     BAHomeVC *homeVC = [[BAHomeVC alloc] init];
     homeVC.hidesBottomBarWhenPushed = NO;
     BANavigationController *homeNavi = [[BANavigationController alloc] initWithRootViewController:homeVC];
-    homeVC.tabBarItem = [];
-    
+    homeNavi.tabBarItem = [BAUIHelper ba_uiHelper_tabbarItemWithTitle:@"首页" image:[UIImageMake(@"icon_tabbar_uikit") imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:UIImageMake(@"icon_tabbar_uikit_selected")  selectedTitleColor:UIColorGreen tag:0];
+    homeVC.title = homeNavi.tabBarItem.title;
     
     /*! meVC */
-    
-    
-    
+    BAMeVC *meVC = [[BAMeVC alloc] init];
+    meVC.hidesBottomBarWhenPushed = NO;
+    BANavigationController *meNavi = [[BANavigationController alloc] initWithRootViewController:meVC];
+    meNavi.tabBarItem = [BAUIHelper ba_uiHelper_tabbarItemWithTitle:@"我" image:[UIImageMake(@"icon_tabbar_lab") imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:UIImageMake(@"icon_tabbar_lab_selected")  selectedTitleColor:UIColorRed tag:1];
+    meVC.title = meNavi.tabBarItem.title;
+
+    tabbarController.viewControllers = @[homeNavi, meNavi];
+    self.window.rootViewController = tabbarController;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

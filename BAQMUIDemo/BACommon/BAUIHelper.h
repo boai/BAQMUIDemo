@@ -23,7 +23,6 @@
 + (UITabBarItem *)ba_uiHelper_tabbarItemWithTitle:(NSString *)title
                                             image:(UIImage *)image
                                     selectedImage:(UIImage *)selectedImage
-                                       titleColor:(UIColor *)titleColor
                                selectedTitleColor:(UIColor *)selectedTitleColor
                                               tag:(NSInteger)tag;
 
