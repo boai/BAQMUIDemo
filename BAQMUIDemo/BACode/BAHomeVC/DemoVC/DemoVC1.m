@@ -55,8 +55,8 @@
         cell = [[DemoVC1_cell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
     }
     cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
-//    cell.model = self.dataArray[indexPath.row];
-    [cell renderWithNameText:self.dataArray[indexPath.row].userName  contentText:self.dataArray[indexPath.row].content];
+    cell.model = self.dataArray[indexPath.row];
+//    [cell renderWithNameText:self.dataArray[indexPath.row].userName  contentText:self.dataArray[indexPath.row].content];
 
     return cell;
 }
@@ -65,10 +65,10 @@
 {
     static NSString *cellID = @"cell";
 
-    return [self.tableView qmui_heightForCellWithIdentifier:cellID cacheByIndexPath:indexPath configuration:^(id cell) {
+    return [self.tableView qmui_heightForCellWithIdentifier:cellID cacheByIndexPath:indexPath configuration:^(DemoVC1_cell *cell) {
         
-//        cell.model = self.dataArray[indexPath.row];
-        [cell renderWithNameText:self.dataArray[indexPath.row].userName  contentText:self.dataArray[indexPath.row].content];
+        cell.model = self.dataArray[indexPath.row];
+//        [cell renderWithNameText:self.dataArray[indexPath.row].userName  contentText:self.dataArray[indexPath.row].content];
     }];
 }
 

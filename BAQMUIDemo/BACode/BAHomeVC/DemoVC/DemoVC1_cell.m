@@ -7,7 +7,7 @@
 //
 
 #import "DemoVC1_cell.h"
-//#import "DemoVC1_model.h"
+#import "DemoVC1_model.h"
 
 static UIEdgeInsets const kInsets            = {15, 15, 15, 15};
 static CGFloat const kUserImageSize          = 35;
@@ -62,32 +62,32 @@ static CGFloat const kContentMargin_bottom   = 6;
     [self.contentView addSubview:self.timeLabel];
 }
 
-//- (void)setModel:(DemoVC1_model *)model
-//{
-//    _model = model;
-//    
-//    self.nameLabel.text = model.userName;
-////    self.userImageView.image = model.userImageUrl;
-//    self.contentLabel.attributedText = [self ba_attributedStringWithText:model.content lineHeight:25];
-////    self.timeLabel.text = model.time;
-//    self.timeLabel.text = @"去年 16：55";
-//
-//    /*! 在一个段落的最后一行自然对齐 */
-//    self.contentLabel.textAlignment = NSTextAlignmentJustified;
-//    
-//    [self setNeedsLayout];
-//}
-
-- (void)renderWithNameText:(NSString *)nameText contentText:(NSString *)contentText
+- (void)setModel:(DemoVC1_model *)model
 {
-    self.nameLabel.text = nameText;
-    self.contentLabel.attributedText = [self ba_attributedStringWithText:contentText lineHeight:26];
-    self.timeLabel.text = @"昨天 18:24";
+    _model = model;
     
+    self.nameLabel.text = model.userName;
+//    self.userImageView.image = model.userImageUrl;
+    self.contentLabel.attributedText = [self ba_attributedStringWithText:model.content lineHeight:25];
+//    self.timeLabel.text = model.time;
+    self.timeLabel.text = @"去年 16：55";
+
+    /*! 在一个段落的最后一行自然对齐 */
     self.contentLabel.textAlignment = NSTextAlignmentJustified;
     
     [self setNeedsLayout];
 }
+
+//- (void)renderWithNameText:(NSString *)nameText contentText:(NSString *)contentText
+//{
+//    self.nameLabel.text = nameText;
+//    self.contentLabel.attributedText = [self ba_attributedStringWithText:contentText lineHeight:26];
+//    self.timeLabel.text = @"昨天 18:24";
+//    
+//    self.contentLabel.textAlignment = NSTextAlignmentJustified;
+//    
+//    [self setNeedsLayout];
+//}
 
 - (NSAttributedString *)ba_attributedStringWithText:(NSString *)text lineHeight:(CGFloat)lineHeight
 {
@@ -135,19 +135,20 @@ static CGFloat const kContentMargin_bottom   = 6;
     self.userImageView.frame = CGRectSetXY(self.userImageView.frame, kInsets.left, kInsets.top);
     if (self.nameLabel.text.length > 0)
     {
-        CGFloat name_With = content_With - CGRectGetWidth(self.userImageView.bounds) - kUserImageMargin_right;
+        CGFloat name_With = content_With - self.userImageView.width - kUserImageMargin_right;
         CGSize nameSize = [self.nameLabel sizeThatFits:CGSizeMake(name_With, CGFLOAT_MAX)];
         
         CGFloat name_x = self.userImageView.x + self.userImageView.width + kUserImageMargin_right;
-        CGFloat name_y = (self.userImageView.y + self.userImageView.height - nameSize.height)/2;
+//        CGFloat name_y = (self.userImageView.y + self.userImageView.height - nameSize.height)/2;
         
-        self.nameLabel.frame = CGRectFlatMake(name_x, name_y, name_With, nameSize.height);
+        self.nameLabel.frame = CGRectFlatMake(name_x, 0, name_With, nameSize.height);
+        self.nameLabel.centerY = self.userImageView.centerY;
     }
     
     if (self.contentLabel.text.length > 0)
     {
         CGSize contentSize = [self.contentLabel sizeThatFits:CGSizeMake(content_With, CGFLOAT_MAX)];
-        CGFloat content_y = self.userImageView.y + kUserImageMargin_bottom;
+        CGFloat content_y = self.userImageView.y + self.userImageView.height +kUserImageMargin_bottom;
         self.contentLabel.frame = CGRectFlatMake(kInsets.left, content_y, content_With, contentSize.height);
     }
     

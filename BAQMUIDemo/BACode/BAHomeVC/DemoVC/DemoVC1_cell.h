@@ -8,11 +8,11 @@
 
 #import <QMUIKit/QMUIKit.h>
 
-//@class DemoVC1_model;
+@class DemoVC1_model;
 @interface DemoVC1_cell : QMUITableViewCell
 
-//@property (nonatomic, strong) DemoVC1_model *model;
+@property (nonatomic, strong) DemoVC1_model *model;
 
-- (void)renderWithNameText:(NSString *)nameText contentText:(NSString *)contentText;
+//- (void)renderWithNameText:(NSString *)nameText contentText:(NSString *)contentText;
 
 @end
