@@ -39,7 +39,8 @@
 - (void)creatDatas
 {
     [self addCell:@"1、QMUITableView 用法" content:@"QMUITableView " class:@"DemoVC1"];
-    
+    [self addCell:@"2、QMUITips 用法" content:@"QMUITips " class:@"DemoVC2"];
+
 }
 
 - (void)addCell:(NSString *)title
