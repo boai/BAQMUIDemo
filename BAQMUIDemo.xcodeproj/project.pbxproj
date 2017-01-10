@@ -22,6 +22,11 @@
 		C4D472291E1F472400438D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D472271E1F472400438D98 /* Main.storyboard */; };
 		C4D4722B1E1F472400438D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722A1E1F472400438D98 /* Assets.xcassets */; };
 		C4D4722E1E1F472400438D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */; };
+		C4ED70751E23593A00DBFE65 /* DemoVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED70731E23593A00DBFE65 /* DemoVC1.m */; };
+		C4ED70761E23593A00DBFE65 /* DemoVC1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4ED70741E23593A00DBFE65 /* DemoVC1.xib */; };
+		C4ED707C1E236A2C00DBFE65 /* DemoVC1_cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED707B1E236A2C00DBFE65 /* DemoVC1_cell.m */; };
+		C4ED70811E237AED00DBFE65 /* DemoVC1_model.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED70801E237AED00DBFE65 /* DemoVC1_model.m */; };
+		C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */; };
 		EC8AAABE7AF79A925E2663B4 /* libPods-BAQMUIDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C07FA7485D4F66D719D615E4 /* libPods-BAQMUIDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +61,16 @@
 		C4D4722A1E1F472400438D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D4722D1E1F472400438D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D4722F1E1F472400438D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4ED70721E23593A00DBFE65 /* DemoVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC1.h; sourceTree = "<group>"; };
+		C4ED70731E23593A00DBFE65 /* DemoVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC1.m; sourceTree = "<group>"; };
+		C4ED70741E23593A00DBFE65 /* DemoVC1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC1.xib; sourceTree = "<group>"; };
+		C4ED707A1E236A2C00DBFE65 /* DemoVC1_cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC1_cell.h; sourceTree = "<group>"; };
+		C4ED707B1E236A2C00DBFE65 /* DemoVC1_cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC1_cell.m; sourceTree = "<group>"; };
+		C4ED707E1E236D6200DBFE65 /* BAQMUIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAQMUIColor.h; sourceTree = "<group>"; };
+		C4ED707F1E237AED00DBFE65 /* DemoVC1_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC1_model.h; sourceTree = "<group>"; };
+		C4ED70801E237AED00DBFE65 /* DemoVC1_model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC1_model.m; sourceTree = "<group>"; };
+		C4ED70821E23878E00DBFE65 /* UIView+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAKit.h"; sourceTree = "<group>"; };
+		C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +107,8 @@
 			children = (
 				C44A6E141E1F913A002FDD68 /* UIColor+BAColorChange.h */,
 				C44A6E151E1F913A002FDD68 /* UIColor+BAColorChange.m */,
+				C4ED70821E23878E00DBFE65 /* UIView+BAKit.h */,
+				C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */,
 			);
 			path = BACatorgry;
 			sourceTree = "<group>";
@@ -110,6 +127,7 @@
 			children = (
 				C44A6E3F1E1F9896002FDD68 /* BAUIHelper.h */,
 				C44A6E401E1F9896002FDD68 /* BAUIHelper.m */,
+				C4ED707E1E236D6200DBFE65 /* BAQMUIColor.h */,
 			);
 			path = BACommon;
 			sourceTree = "<group>";
@@ -140,6 +158,7 @@
 		C44A6E1D1E1F938A002FDD68 /* BAHomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				C4ED70711E23591E00DBFE65 /* DemoVC */,
 				C44A6E1E1E1F938A002FDD68 /* Controller */,
 				C44A6E1F1E1F938A002FDD68 /* Model */,
 				C44A6E201E1F938A002FDD68 /* View */,
@@ -266,6 +285,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C4ED70711E23591E00DBFE65 /* DemoVC */ = {
+			isa = PBXGroup;
+			children = (
+				C4ED70721E23593A00DBFE65 /* DemoVC1.h */,
+				C4ED70731E23593A00DBFE65 /* DemoVC1.m */,
+				C4ED70741E23593A00DBFE65 /* DemoVC1.xib */,
+				C4ED707A1E236A2C00DBFE65 /* DemoVC1_cell.h */,
+				C4ED707B1E236A2C00DBFE65 /* DemoVC1_cell.m */,
+				C4ED707F1E237AED00DBFE65 /* DemoVC1_model.h */,
+				C4ED70801E237AED00DBFE65 /* DemoVC1_model.m */,
+			);
+			path = DemoVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -334,6 +367,7 @@
 				C44A6E291E1F939D002FDD68 /* BAHomeVC.xib in Resources */,
 				C44A6E2E1E1F93AD002FDD68 /* BAMeVC.xib in Resources */,
 				C4D472291E1F472400438D98 /* Main.storyboard in Resources */,
+				C4ED70761E23593A00DBFE65 /* DemoVC1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,11 +430,15 @@
 				C44A6E1B1E1F913A002FDD68 /* UIColor+BAColorChange.m in Sources */,
 				C4D472231E1F472400438D98 /* AppDelegate.m in Sources */,
 				C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */,
+				C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */,
 				C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */,
+				C4ED70811E237AED00DBFE65 /* DemoVC1_model.m in Sources */,
 				C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */,
 				C44A6E411E1F9896002FDD68 /* BAUIHelper.m in Sources */,
+				C4ED707C1E236A2C00DBFE65 /* DemoVC1_cell.m in Sources */,
 				C4D472201E1F472400438D98 /* main.m in Sources */,
 				C44A6E311E1F93F8002FDD68 /* BATabBarViewController.m in Sources */,
+				C4ED70751E23593A00DBFE65 /* DemoVC1.m in Sources */,
 				C44A6E381E1F9567002FDD68 /* BABaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

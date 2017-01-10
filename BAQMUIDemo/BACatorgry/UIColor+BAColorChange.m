@@ -10,7 +10,7 @@
 
 @implementation UIColor (BAColorChange)
 
-+ (UIColor *)colorWithHexString: (NSString *)color
++ (UIColor *)ba_colorWithHexString:(NSString *)color
 {
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     

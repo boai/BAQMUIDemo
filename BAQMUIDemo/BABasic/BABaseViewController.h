@@ -10,4 +10,6 @@
 
 @interface BABaseViewController : QMUICommonViewController
 
+- (void)setupUI;
+
 @end

@@ -8,7 +8,14 @@
 
 #import "BAHomeVC.h"
 
-@interface BAHomeVC ()
+
+@interface BAHomeVC () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) QMUITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray  *titlesArray;
+@property (nonatomic, strong) NSMutableArray  *classNamesArray;
+@property (nonatomic, strong) NSMutableArray  *contentsArray;
 
 @end
 
@@ -19,21 +26,123 @@
     // Do any additional setup after loading the view from its nib.
     
 //    self.view.backgroundColor = UIColorGreen;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupUI
+{
+    self.tableView.hidden = NO;
+    [self creatDatas];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)creatDatas
+{
+    [self addCell:@"1、QMUITableView 用法" content:@"QMUITableView " class:@"DemoVC1"];
+    
 }
-*/
+
+- (void)addCell:(NSString *)title
+        content:(NSString *)content
+          class:(NSString *)className
+{
+    [self.titlesArray addObject:title];
+    [self.contentsArray  addObject:content];
+    [self.classNamesArray addObject:className];
+}
+
+#pragma mark - UITableView Delegate & DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.titlesArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellID = @"cell";
+    QMUITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell)
+    {
+        cell = [[QMUITableViewCell alloc] initForTableView:self.tableView withStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    cell.textLabel.text = self.titlesArray[indexPath.row];
+    cell.textLabel.font = UIFontMake(15);
+    [cell updateCellAppearanceWithIndexPath:indexPath];
+    
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return TableViewCellNormalHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *className = self.classNamesArray[indexPath.row];
+    Class class = NSClassFromString(className);
+    if (class)
+    {
+        UIViewController *vc = class.new;
+        vc.title = self.titlesArray[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    self.tableView.frame = self.view.bounds;
+    
+}
+
+#pragma mark - setter / getter
+- (QMUITableView *)tableView
+{
+    if (!_tableView)
+    {
+        _tableView = [[QMUITableView alloc] init];
+        
+        _tableView.backgroundColor = TableViewBackgroundColor;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        
+        [self.view addSubview:_tableView];
+    }
+    return _tableView;
+}
+
+- (NSMutableArray *)titlesArray
+{
+    if (!_titlesArray)
+    {
+        _titlesArray = @[].mutableCopy;
+    }
+    return _titlesArray;
+}
+
+- (NSMutableArray *)classNamesArray
+{
+    if (!_classNamesArray)
+    {
+        _classNamesArray = @[].mutableCopy;
+    }
+    return _classNamesArray;
+}
+
+- (NSMutableArray *)contentsArray
+{
+    if (!_contentsArray)
+    {
+        _contentsArray = @[].mutableCopy;
+    }
+    return _contentsArray;
+}
 
 @end
