@@ -38,10 +38,9 @@ static CGFloat const kContentMargin_bottom   = 6;
 
 - (void)setupSubViews
 {
-    UIImage *userImage = [UIImage qmui_imageWithStrokeColor:[UIColor qmui_randomColor] size:CGSizeMake(kUserImageSize, kUserImageSize) lineWidth:3.0f cornerRadius:5.0f];
-    
-    _userImageView = [[UIImageView alloc] initWithImage:userImage];
-    
+//    UIImage *userImage = [UIImage qmui_imageWithStrokeColor:[UIColor qmui_randomColor] size:CGSizeMake(kUserImageSize, kUserImageSize) lineWidth:3.0f cornerRadius:kUserImageSize/2];
+    _userImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kInsets.left, kInsets.top, kUserImageSize, kUserImageSize)];
+
     _nameLabel = [[UILabel alloc] init];
     self.nameLabel.font = UIFontBoldMake(16);
     self.nameLabel.textColor = UIColorGray2;
@@ -67,10 +66,10 @@ static CGFloat const kContentMargin_bottom   = 6;
     _model = model;
     
     self.nameLabel.text = model.userName;
-//    self.userImageView.image = model.userImageUrl;
+    self.userImageView.image = UIImageMake(model.userImageUrl);
     self.contentLabel.attributedText = [self ba_attributedStringWithText:model.content lineHeight:25];
-//    self.timeLabel.text = model.time;
-    self.timeLabel.text = @"去年 16：55";
+    self.timeLabel.text = model.time;
+//    self.timeLabel.text = @"去年 16：55";
 
     /*! 在一个段落的最后一行自然对齐 */
     self.contentLabel.textAlignment = NSTextAlignmentJustified;
@@ -132,7 +131,11 @@ static CGFloat const kContentMargin_bottom   = 6;
     
     CGFloat content_With = CGRectGetWidth(self.contentView.bounds) - UIEdgeInsetsGetHorizontalValue(kInsets);
     
-    self.userImageView.frame = CGRectSetXY(self.userImageView.frame, kInsets.left, kInsets.top);
+//    self.userImageView.frame = CGRectSetXY(self.userImageView.frame, kInsets.left, kInsets.top);
+//    self.userImageView.frame = CGRectMake(kInsets.left, kInsets.top, kUserImageSize, kUserImageSize);
+    self.userImageView.layer.cornerRadius = self.userImageView.width/2;
+    self.userImageView.layer.masksToBounds = YES;
+    
     if (self.nameLabel.text.length > 0)
     {
         CGFloat name_With = content_With - self.userImageView.width - kUserImageMargin_right;
