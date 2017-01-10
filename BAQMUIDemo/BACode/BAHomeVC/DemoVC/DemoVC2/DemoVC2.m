@@ -8,6 +8,7 @@
 
 #import "DemoVC2.h"
 #import "BACustomToastAnimator.h"
+#import "BACustomToastContentView.h"
 
 @interface DemoVC2 ()
 
@@ -91,11 +92,13 @@
         BACustomToastAnimator *customAnimator = [[BACustomToastAnimator alloc] initWithToastView:tips];
         tips.toastAnimator = customAnimator;
         
-        [tips showInfo:@"欢迎来到 boaihome.com" detailText:@"2017年1月14日直播，欢迎各位小白前来探讨！"];
+        BACustomToastContentView *customContentView = [[BACustomToastContentView alloc] init];
+        [customContentView ba_renderWitherImage:UIImageMake(@"icon2.jpg") title:@"什么是QMUIToastView" detailText:@"QMUIToastView用于临时显示某些信息，并且会在数秒后自动消失。这些信息通常是轻量级操作的成功信息。"];
+        tips.contentView = customContentView;
         tips.tintColor = UIColorBlue;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [tips removeFromSuperview];
-        });
+        [tips showAnimated:YES];
+        
+        [tips hideAnimated:YES afterDelay:3.0f];
     }
     
 }

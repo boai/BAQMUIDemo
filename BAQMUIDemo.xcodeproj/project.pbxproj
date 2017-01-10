@@ -70,6 +70,7 @@
 		C47DA9C61E24C39E001E0FB7 /* DemoVC2.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47DA9C41E24C39E001E0FB7 /* DemoVC2.xib */; };
 		C47DA9C91E24C444001E0FB7 /* BABaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9C81E24C444001E0FB7 /* BABaseListViewController.m */; };
 		C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */; };
+		C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9D31E24E099001E0FB7 /* BACustomToastContentView.m */; };
 		C4D472201E1F472400438D98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4721F1E1F472400438D98 /* main.m */; };
 		C4D472231E1F472400438D98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D472221E1F472400438D98 /* AppDelegate.m */; };
 		C4D472291E1F472400438D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D472271E1F472400438D98 /* Main.storyboard */; };
@@ -161,6 +162,8 @@
 		C47DA9CA1E24D5E4001E0FB7 /* BACustomToastAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomToastAnimator.h; sourceTree = "<group>"; };
 		C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomToastAnimator.m; sourceTree = "<group>"; };
 		C47DA9D11E24DA59001E0FB7 /* BADefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADefine.h; sourceTree = "<group>"; };
+		C47DA9D21E24E099001E0FB7 /* BACustomToastContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomToastContentView.h; sourceTree = "<group>"; };
+		C47DA9D31E24E099001E0FB7 /* BACustomToastContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomToastContentView.m; sourceTree = "<group>"; };
 		C4D4721B1E1F472400438D98 /* BAQMUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAQMUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D4721F1E1F472400438D98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D472211E1F472400438D98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -440,6 +443,8 @@
 				C47DA9C41E24C39E001E0FB7 /* DemoVC2.xib */,
 				C47DA9CA1E24D5E4001E0FB7 /* BACustomToastAnimator.h */,
 				C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */,
+				C47DA9D21E24E099001E0FB7 /* BACustomToastContentView.h */,
+				C47DA9D31E24E099001E0FB7 /* BACustomToastContentView.m */,
 			);
 			path = DemoVC2;
 			sourceTree = "<group>";
@@ -668,6 +673,7 @@
 			files = (
 				C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */,
 				C4D472231E1F472400438D98 /* AppDelegate.m in Sources */,
+				C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */,
 				C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */,
 				C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */,
 				C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */,
