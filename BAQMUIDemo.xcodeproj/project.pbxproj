@@ -69,6 +69,7 @@
 		C47DA9C51E24C39E001E0FB7 /* DemoVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9C31E24C39E001E0FB7 /* DemoVC2.m */; };
 		C47DA9C61E24C39E001E0FB7 /* DemoVC2.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47DA9C41E24C39E001E0FB7 /* DemoVC2.xib */; };
 		C47DA9C91E24C444001E0FB7 /* BABaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9C81E24C444001E0FB7 /* BABaseListViewController.m */; };
+		C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */; };
 		C4D472201E1F472400438D98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4721F1E1F472400438D98 /* main.m */; };
 		C4D472231E1F472400438D98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D472221E1F472400438D98 /* AppDelegate.m */; };
 		C4D472291E1F472400438D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D472271E1F472400438D98 /* Main.storyboard */; };
@@ -157,6 +158,9 @@
 		C47DA9C41E24C39E001E0FB7 /* DemoVC2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC2.xib; sourceTree = "<group>"; };
 		C47DA9C71E24C444001E0FB7 /* BABaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BABaseListViewController.h; sourceTree = "<group>"; };
 		C47DA9C81E24C444001E0FB7 /* BABaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BABaseListViewController.m; sourceTree = "<group>"; };
+		C47DA9CA1E24D5E4001E0FB7 /* BACustomToastAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomToastAnimator.h; sourceTree = "<group>"; };
+		C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomToastAnimator.m; sourceTree = "<group>"; };
+		C47DA9D11E24DA59001E0FB7 /* BADefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADefine.h; sourceTree = "<group>"; };
 		C4D4721B1E1F472400438D98 /* BAQMUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAQMUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D4721F1E1F472400438D98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D472211E1F472400438D98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 				C44A6E3F1E1F9896002FDD68 /* BAUIHelper.h */,
 				C44A6E401E1F9896002FDD68 /* BAUIHelper.m */,
 				C4ED707E1E236D6200DBFE65 /* BAQMUIColor.h */,
+				C47DA9D11E24DA59001E0FB7 /* BADefine.h */,
 			);
 			path = BACommon;
 			sourceTree = "<group>";
@@ -433,6 +438,8 @@
 				C47DA9C21E24C39E001E0FB7 /* DemoVC2.h */,
 				C47DA9C31E24C39E001E0FB7 /* DemoVC2.m */,
 				C47DA9C41E24C39E001E0FB7 /* DemoVC2.xib */,
+				C47DA9CA1E24D5E4001E0FB7 /* BACustomToastAnimator.h */,
+				C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */,
 			);
 			path = DemoVC2;
 			sourceTree = "<group>";
@@ -665,6 +672,7 @@
 				C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */,
 				C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */,
 				C47DA9C11E24C2DE001E0FB7 /* DemoVC1_model.m in Sources */,
+				C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */,
 				C47DA9C91E24C444001E0FB7 /* BABaseListViewController.m in Sources */,
 				C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */,
 				C44A6E411E1F9896002FDD68 /* BAUIHelper.m in Sources */,
