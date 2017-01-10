@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C44A6E1B1E1F913A002FDD68 /* UIColor+BAColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E151E1F913A002FDD68 /* UIColor+BAColorChange.m */; };
 		C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E261E1F939D002FDD68 /* BAHomeVC.m */; };
 		C44A6E291E1F939D002FDD68 /* BAHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44A6E271E1F939D002FDD68 /* BAHomeVC.xib */; };
 		C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E2B1E1F93AD002FDD68 /* BAMeVC.m */; };
@@ -80,8 +79,6 @@
 		02D1CD00C3BF72A28F70BCE6 /* Pods-BAQMUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAQMUIDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAQMUIDemo/Pods-BAQMUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		63260277B1C0B9ECEC147178 /* Pods-BAQMUIDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAQMUIDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAQMUIDemo/Pods-BAQMUIDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C07FA7485D4F66D719D615E4 /* libPods-BAQMUIDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAQMUIDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C44A6E141E1F913A002FDD68 /* UIColor+BAColorChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BAColorChange.h"; sourceTree = "<group>"; };
-		C44A6E151E1F913A002FDD68 /* UIColor+BAColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BAColorChange.m"; sourceTree = "<group>"; };
 		C44A6E1C1E1F919B002FDD68 /* BAQMUI.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAQMUI.pch; sourceTree = "<group>"; };
 		C44A6E251E1F939D002FDD68 /* BAHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAHomeVC.h; sourceTree = "<group>"; };
 		C44A6E261E1F939D002FDD68 /* BAHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAHomeVC.m; sourceTree = "<group>"; };
@@ -197,8 +194,6 @@
 		C44A6E131E1F913A002FDD68 /* BACatorgry */ = {
 			isa = PBXGroup;
 			children = (
-				C44A6E141E1F913A002FDD68 /* UIColor+BAColorChange.h */,
-				C44A6E151E1F913A002FDD68 /* UIColor+BAColorChange.m */,
 				C4ED70821E23878E00DBFE65 /* UIView+BAKit.h */,
 				C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */,
 			);
@@ -635,7 +630,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */,
-				C44A6E1B1E1F913A002FDD68 /* UIColor+BAColorChange.m in Sources */,
 				C4D472231E1F472400438D98 /* AppDelegate.m in Sources */,
 				C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */,
 				C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */,

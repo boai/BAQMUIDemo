@@ -25,14 +25,12 @@
     [super viewDidLoad];
     
     //    self.view.backgroundColor = UIColorGreen;
-    
 }
 
 - (void)setupUI
 {
     self.tableView.hidden = NO;
     [self.tableView registerClass:[DemoVC1_cell class] forCellReuseIdentifier:@"cell"];
-
 }
 
 #pragma mark - UITableView Delegate & DataSource
