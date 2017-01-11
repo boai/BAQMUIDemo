@@ -196,13 +196,28 @@
     //- QMUICMI.hidesBottomBarWhenPushedInitially = YES;    // HidesBottomBarWhenPushedInitially : QMUICommonViewController.hidesBottomBarWhenPushed的初始值，默认为YES
 }
 
++ (void)ba_renderGlobalAppearances
+{
+    [BAUIHelper ba_uiHelper_customMoreOperationAppearance];
+    [BAUIHelper ba_uiHelper_customAlertControllerAppearance];
+}
+
 @end
 
 @implementation BAUIHelper (QMUIModalPresentationViewController)
 
-+ (void)ba_uiHelper_customAlertControllerAppearance
++ (void)ba_uiHelper_customMoreOperationAppearance
 {
     /*! 如果需要统一修改全局的 QMUIMoreOperationController 样式，在这里修改 appearance 的值即可 */
+}
+
+@end
+
+@implementation BAUIHelper (QMUIAlertControllerAppearance)
+
++ (void)ba_uiHelper_customAlertControllerAppearance
+{
+    /*! 如果需要统一修改全局的 QMUIAlertController 样式，在这里修改 appearance 的值即可 */
 }
 
 @end

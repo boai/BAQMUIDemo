@@ -10,11 +10,20 @@
 
 @interface BAUIHelper : NSObject
 
+/*! 启动自定义QMUI的配置模板 */
 + (void)ba_setupConfigurationTemplate;
+/*! 博爱自定义的全局样式渲染 */
++ (void)ba_renderGlobalAppearances;
 
 @end
 
 @interface BAUIHelper (QMUIModalPresentationViewController)
+
++ (void)ba_uiHelper_customMoreOperationAppearance;
+
+@end
+
+@interface BAUIHelper (QMUIAlertControllerAppearance)
 
 + (void)ba_uiHelper_customAlertControllerAppearance;
 

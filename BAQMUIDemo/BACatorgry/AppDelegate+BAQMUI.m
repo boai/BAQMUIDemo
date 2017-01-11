@@ -23,6 +23,9 @@
     /*! 将全局的控件样式渲染出来 */
     [QMUIConfigurationManager renderGlobalAppearances];
     
+    /*! 博爱自定义的全局样式渲染 */
+    [BAUIHelper ba_renderGlobalAppearances];
+    
     /*! 将状态栏设置为希望的样式 */
     [QMUIHelper renderStatusBarStyleLight];
     
