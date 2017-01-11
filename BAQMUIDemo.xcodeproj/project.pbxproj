@@ -73,9 +73,26 @@
 		C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9D31E24E099001E0FB7 /* BACustomToastContentView.m */; };
 		C4909A401E25D0FB009D533F /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A3F1E25D0FB009D533F /* UIImageEffects.m */; };
 		C4909A431E25D5B7009D533F /* AppDelegate+BAQMUI.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A421E25D5B7009D533F /* AppDelegate+BAQMUI.m */; };
+		C4909A461E25DF7B009D533F /* AppDelegate+BALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A451E25DF7B009D533F /* AppDelegate+BALaunch.m */; };
+		C4909A6F1E25FCAE009D533F /* CALayer+Cool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A4A1E25FCAE009D533F /* CALayer+Cool.m */; };
+		C4909A701E25FCAE009D533F /* CoreLaunchCool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A4C1E25FCAE009D533F /* CoreLaunchCool.m */; };
+		C4909A751E25FCAE009D533F /* CoreLaunchLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A591E25FCAE009D533F /* CoreLaunchLite.m */; };
+		C4909A761E25FCAE009D533F /* CoreLaunchPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A5C1E25FCAE009D533F /* CoreLaunchPlus.m */; };
+		C4909A771E25FCAE009D533F /* CoreLaunchPro.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A5F1E25FCAE009D533F /* CoreLaunchPro.m */; };
+		C4909A781E25FCAE009D533F /* CYNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A621E25FCAE009D533F /* CYNavigationControllerDelegate.m */; };
+		C4909A791E25FCAE009D533F /* CYPortalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A641E25FCAE009D533F /* CYPortalTransitionAnimator.m */; };
+		C4909A7A1E25FCAE009D533F /* CYPortalTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A661E25FCAE009D533F /* CYPortalTransitionContext.m */; };
+		C4909A7B1E25FCAE009D533F /* CYViewControllerTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A681E25FCAE009D533F /* CYViewControllerTransitioningDelegate.m */; };
+		C4909A7C1E25FCAE009D533F /* UINavigationController+PortalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A6A1E25FCAE009D533F /* UINavigationController+PortalTransition.m */; };
+		C4909A7D1E25FCAE009D533F /* UIViewController+PortalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A6C1E25FCAE009D533F /* UIViewController+PortalTransition.m */; };
+		C4909A7E1E25FCAE009D533F /* ProVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A6E1E25FCAE009D533F /* ProVC.m */; };
+		C4909A921E2601B6009D533F /* BAActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A871E2601B6009D533F /* BAActivityIndicatorView.m */; };
+		C4909A931E2601B6009D533F /* BALoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A891E2601B6009D533F /* BALoadingView.m */; };
+		C4909A941E2601B6009D533F /* BALoadingWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A8B1E2601B6009D533F /* BALoadingWaveView.m */; };
+		C4909A951E2601B6009D533F /* UIView+BATransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A8E1E2601B6009D533F /* UIView+BATransition.m */; };
+		C4909A961E2601B6009D533F /* UIView+BAAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A911E2601B6009D533F /* UIView+BAAnimation.m */; };
 		C4D472201E1F472400438D98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4721F1E1F472400438D98 /* main.m */; };
 		C4D472231E1F472400438D98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D472221E1F472400438D98 /* AppDelegate.m */; };
-		C4D472291E1F472400438D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D472271E1F472400438D98 /* Main.storyboard */; };
 		C4D4722B1E1F472400438D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722A1E1F472400438D98 /* Assets.xcassets */; };
 		C4D4722E1E1F472400438D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */; };
 		C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */; };
@@ -170,11 +187,47 @@
 		C4909A3F1E25D0FB009D533F /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		C4909A411E25D5B7009D533F /* AppDelegate+BAQMUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BAQMUI.h"; sourceTree = "<group>"; };
 		C4909A421E25D5B7009D533F /* AppDelegate+BAQMUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BAQMUI.m"; sourceTree = "<group>"; };
+		C4909A441E25DF7B009D533F /* AppDelegate+BALaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BALaunch.h"; sourceTree = "<group>"; };
+		C4909A451E25DF7B009D533F /* AppDelegate+BALaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BALaunch.m"; sourceTree = "<group>"; };
+		C4909A491E25FCAE009D533F /* CALayer+Cool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Cool.h"; sourceTree = "<group>"; };
+		C4909A4A1E25FCAE009D533F /* CALayer+Cool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Cool.m"; sourceTree = "<group>"; };
+		C4909A4B1E25FCAE009D533F /* CoreLaunchCool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLaunchCool.h; sourceTree = "<group>"; };
+		C4909A4C1E25FCAE009D533F /* CoreLaunchCool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLaunchCool.m; sourceTree = "<group>"; };
+		C4909A581E25FCAE009D533F /* CoreLaunchLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLaunchLite.h; sourceTree = "<group>"; };
+		C4909A591E25FCAE009D533F /* CoreLaunchLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLaunchLite.m; sourceTree = "<group>"; };
+		C4909A5B1E25FCAE009D533F /* CoreLaunchPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLaunchPlus.h; sourceTree = "<group>"; };
+		C4909A5C1E25FCAE009D533F /* CoreLaunchPlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLaunchPlus.m; sourceTree = "<group>"; };
+		C4909A5E1E25FCAE009D533F /* CoreLaunchPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLaunchPro.h; sourceTree = "<group>"; };
+		C4909A5F1E25FCAE009D533F /* CoreLaunchPro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLaunchPro.m; sourceTree = "<group>"; };
+		C4909A611E25FCAE009D533F /* CYNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		C4909A621E25FCAE009D533F /* CYNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNavigationControllerDelegate.m; sourceTree = "<group>"; };
+		C4909A631E25FCAE009D533F /* CYPortalTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPortalTransitionAnimator.h; sourceTree = "<group>"; };
+		C4909A641E25FCAE009D533F /* CYPortalTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPortalTransitionAnimator.m; sourceTree = "<group>"; };
+		C4909A651E25FCAE009D533F /* CYPortalTransitionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPortalTransitionContext.h; sourceTree = "<group>"; };
+		C4909A661E25FCAE009D533F /* CYPortalTransitionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPortalTransitionContext.m; sourceTree = "<group>"; };
+		C4909A671E25FCAE009D533F /* CYViewControllerTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYViewControllerTransitioningDelegate.h; sourceTree = "<group>"; };
+		C4909A681E25FCAE009D533F /* CYViewControllerTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYViewControllerTransitioningDelegate.m; sourceTree = "<group>"; };
+		C4909A691E25FCAE009D533F /* UINavigationController+PortalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PortalTransition.h"; sourceTree = "<group>"; };
+		C4909A6A1E25FCAE009D533F /* UINavigationController+PortalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PortalTransition.m"; sourceTree = "<group>"; };
+		C4909A6B1E25FCAE009D533F /* UIViewController+PortalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PortalTransition.h"; sourceTree = "<group>"; };
+		C4909A6C1E25FCAE009D533F /* UIViewController+PortalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PortalTransition.m"; sourceTree = "<group>"; };
+		C4909A6D1E25FCAE009D533F /* ProVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProVC.h; sourceTree = "<group>"; };
+		C4909A6E1E25FCAE009D533F /* ProVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProVC.m; sourceTree = "<group>"; };
+		C4909A861E2601B6009D533F /* BAActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAActivityIndicatorView.h; sourceTree = "<group>"; };
+		C4909A871E2601B6009D533F /* BAActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAActivityIndicatorView.m; sourceTree = "<group>"; };
+		C4909A881E2601B6009D533F /* BALoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALoadingView.h; sourceTree = "<group>"; };
+		C4909A891E2601B6009D533F /* BALoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALoadingView.m; sourceTree = "<group>"; };
+		C4909A8A1E2601B6009D533F /* BALoadingWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALoadingWaveView.h; sourceTree = "<group>"; };
+		C4909A8B1E2601B6009D533F /* BALoadingWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALoadingWaveView.m; sourceTree = "<group>"; };
+		C4909A8D1E2601B6009D533F /* UIView+BATransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BATransition.h"; sourceTree = "<group>"; };
+		C4909A8E1E2601B6009D533F /* UIView+BATransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BATransition.m"; sourceTree = "<group>"; };
+		C4909A901E2601B6009D533F /* UIView+BAAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAAnimation.h"; sourceTree = "<group>"; };
+		C4909A911E2601B6009D533F /* UIView+BAAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAAnimation.m"; sourceTree = "<group>"; };
+		C4909A971E2601C1009D533F /* BAAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAAnimation.h; sourceTree = "<group>"; };
 		C4D4721B1E1F472400438D98 /* BAQMUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAQMUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D4721F1E1F472400438D98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D472211E1F472400438D98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4D472221E1F472400438D98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C4D472281E1F472400438D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4D4722A1E1F472400438D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D4722D1E1F472400438D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D4722F1E1F472400438D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -219,6 +272,8 @@
 				C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */,
 				C4909A411E25D5B7009D533F /* AppDelegate+BAQMUI.h */,
 				C4909A421E25D5B7009D533F /* AppDelegate+BAQMUI.m */,
+				C4909A441E25DF7B009D533F /* AppDelegate+BALaunch.h */,
+				C4909A451E25DF7B009D533F /* AppDelegate+BALaunch.m */,
 			);
 			path = BACatorgry;
 			sourceTree = "<group>";
@@ -248,6 +303,8 @@
 		C44A6E181E1F913A002FDD68 /* BALib */ = {
 			isa = PBXGroup;
 			children = (
+				C4909A841E2601B6009D533F /* BAAnimation */,
+				C4909A471E25FCAE009D533F /* CoreLaunch */,
 			);
 			path = BALib;
 			sourceTree = "<group>";
@@ -459,6 +516,119 @@
 			path = DemoVC2;
 			sourceTree = "<group>";
 		};
+		C4909A471E25FCAE009D533F /* CoreLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A481E25FCAE009D533F /* CoreLaunchCool */,
+				C4909A571E25FCAE009D533F /* CoreLaunchLite */,
+				C4909A5A1E25FCAE009D533F /* CoreLaunchPlus */,
+				C4909A5D1E25FCAE009D533F /* CoreLaunchPro */,
+			);
+			path = CoreLaunch;
+			sourceTree = "<group>";
+		};
+		C4909A481E25FCAE009D533F /* CoreLaunchCool */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A491E25FCAE009D533F /* CALayer+Cool.h */,
+				C4909A4A1E25FCAE009D533F /* CALayer+Cool.m */,
+				C4909A4B1E25FCAE009D533F /* CoreLaunchCool.h */,
+				C4909A4C1E25FCAE009D533F /* CoreLaunchCool.m */,
+			);
+			path = CoreLaunchCool;
+			sourceTree = "<group>";
+		};
+		C4909A571E25FCAE009D533F /* CoreLaunchLite */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A581E25FCAE009D533F /* CoreLaunchLite.h */,
+				C4909A591E25FCAE009D533F /* CoreLaunchLite.m */,
+			);
+			path = CoreLaunchLite;
+			sourceTree = "<group>";
+		};
+		C4909A5A1E25FCAE009D533F /* CoreLaunchPlus */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A5B1E25FCAE009D533F /* CoreLaunchPlus.h */,
+				C4909A5C1E25FCAE009D533F /* CoreLaunchPlus.m */,
+			);
+			path = CoreLaunchPlus;
+			sourceTree = "<group>";
+		};
+		C4909A5D1E25FCAE009D533F /* CoreLaunchPro */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A5E1E25FCAE009D533F /* CoreLaunchPro.h */,
+				C4909A5F1E25FCAE009D533F /* CoreLaunchPro.m */,
+				C4909A601E25FCAE009D533F /* PortalTransition */,
+				C4909A6D1E25FCAE009D533F /* ProVC.h */,
+				C4909A6E1E25FCAE009D533F /* ProVC.m */,
+			);
+			path = CoreLaunchPro;
+			sourceTree = "<group>";
+		};
+		C4909A601E25FCAE009D533F /* PortalTransition */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A611E25FCAE009D533F /* CYNavigationControllerDelegate.h */,
+				C4909A621E25FCAE009D533F /* CYNavigationControllerDelegate.m */,
+				C4909A631E25FCAE009D533F /* CYPortalTransitionAnimator.h */,
+				C4909A641E25FCAE009D533F /* CYPortalTransitionAnimator.m */,
+				C4909A651E25FCAE009D533F /* CYPortalTransitionContext.h */,
+				C4909A661E25FCAE009D533F /* CYPortalTransitionContext.m */,
+				C4909A671E25FCAE009D533F /* CYViewControllerTransitioningDelegate.h */,
+				C4909A681E25FCAE009D533F /* CYViewControllerTransitioningDelegate.m */,
+				C4909A691E25FCAE009D533F /* UINavigationController+PortalTransition.h */,
+				C4909A6A1E25FCAE009D533F /* UINavigationController+PortalTransition.m */,
+				C4909A6B1E25FCAE009D533F /* UIViewController+PortalTransition.h */,
+				C4909A6C1E25FCAE009D533F /* UIViewController+PortalTransition.m */,
+			);
+			path = PortalTransition;
+			sourceTree = "<group>";
+		};
+		C4909A841E2601B6009D533F /* BAAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A971E2601C1009D533F /* BAAnimation.h */,
+				C4909A851E2601B6009D533F /* BALoadingView */,
+				C4909A8C1E2601B6009D533F /* BATransition */,
+				C4909A8F1E2601B6009D533F /* BAUIViewAnimation */,
+			);
+			path = BAAnimation;
+			sourceTree = "<group>";
+		};
+		C4909A851E2601B6009D533F /* BALoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A861E2601B6009D533F /* BAActivityIndicatorView.h */,
+				C4909A871E2601B6009D533F /* BAActivityIndicatorView.m */,
+				C4909A881E2601B6009D533F /* BALoadingView.h */,
+				C4909A891E2601B6009D533F /* BALoadingView.m */,
+				C4909A8A1E2601B6009D533F /* BALoadingWaveView.h */,
+				C4909A8B1E2601B6009D533F /* BALoadingWaveView.m */,
+			);
+			path = BALoadingView;
+			sourceTree = "<group>";
+		};
+		C4909A8C1E2601B6009D533F /* BATransition */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A8D1E2601B6009D533F /* UIView+BATransition.h */,
+				C4909A8E1E2601B6009D533F /* UIView+BATransition.m */,
+			);
+			path = BATransition;
+			sourceTree = "<group>";
+		};
+		C4909A8F1E2601B6009D533F /* BAUIViewAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C4909A901E2601B6009D533F /* UIView+BAAnimation.h */,
+				C4909A911E2601B6009D533F /* UIView+BAAnimation.m */,
+			);
+			path = BAUIViewAnimation;
+			sourceTree = "<group>";
+		};
 		C4D472121E1F472400438D98 = {
 			isa = PBXGroup;
 			children = (
@@ -497,7 +667,6 @@
 		C4D4721E1E1F472400438D98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C4D472271E1F472400438D98 /* Main.storyboard */,
 				C4D4722A1E1F472400438D98 /* Assets.xcassets */,
 				C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */,
 				C4D4722F1E1F472400438D98 /* Info.plist */,
@@ -622,7 +791,6 @@
 				C47DA98A1E247BDA001E0FB7 /* 12.jpg in Resources */,
 				C47DA9B11E247BDA001E0FB7 /* test2.jpg in Resources */,
 				C47DA98F1E247BDA001E0FB7 /* 17.jpg in Resources */,
-				C4D472291E1F472400438D98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,36 +852,46 @@
 				C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */,
 				C4909A431E25D5B7009D533F /* AppDelegate+BAQMUI.m in Sources */,
 				C4D472231E1F472400438D98 /* AppDelegate.m in Sources */,
+				C4909A961E2601B6009D533F /* UIView+BAAnimation.m in Sources */,
 				C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */,
+				C4909A771E25FCAE009D533F /* CoreLaunchPro.m in Sources */,
 				C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */,
 				C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */,
 				C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */,
 				C47DA9C11E24C2DE001E0FB7 /* DemoVC1_model.m in Sources */,
+				C4909A7D1E25FCAE009D533F /* UIViewController+PortalTransition.m in Sources */,
+				C4909A951E2601B6009D533F /* UIView+BATransition.m in Sources */,
+				C4909A7E1E25FCAE009D533F /* ProVC.m in Sources */,
+				C4909A921E2601B6009D533F /* BAActivityIndicatorView.m in Sources */,
+				C4909A701E25FCAE009D533F /* CoreLaunchCool.m in Sources */,
 				C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */,
 				C47DA9C91E24C444001E0FB7 /* BABaseListViewController.m in Sources */,
+				C4909A461E25DF7B009D533F /* AppDelegate+BALaunch.m in Sources */,
+				C4909A931E2601B6009D533F /* BALoadingView.m in Sources */,
+				C4909A6F1E25FCAE009D533F /* CALayer+Cool.m in Sources */,
 				C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */,
+				C4909A791E25FCAE009D533F /* CYPortalTransitionAnimator.m in Sources */,
+				C4909A7C1E25FCAE009D533F /* UINavigationController+PortalTransition.m in Sources */,
+				C4909A7B1E25FCAE009D533F /* CYViewControllerTransitioningDelegate.m in Sources */,
 				C44A6E411E1F9896002FDD68 /* BAUIHelper.m in Sources */,
+				C4909A7A1E25FCAE009D533F /* CYPortalTransitionContext.m in Sources */,
 				C47DA9C01E24C2DE001E0FB7 /* DemoVC1_cell.m in Sources */,
 				C4D472201E1F472400438D98 /* main.m in Sources */,
 				C47DA9C51E24C39E001E0FB7 /* DemoVC2.m in Sources */,
 				C4909A401E25D0FB009D533F /* UIImageEffects.m in Sources */,
+				C4909A781E25FCAE009D533F /* CYNavigationControllerDelegate.m in Sources */,
+				C4909A761E25FCAE009D533F /* CoreLaunchPlus.m in Sources */,
 				C44A6E311E1F93F8002FDD68 /* BATabBarViewController.m in Sources */,
+				C4909A941E2601B6009D533F /* BALoadingWaveView.m in Sources */,
 				C47DA9BE1E24C2DE001E0FB7 /* DemoVC1.m in Sources */,
 				C44A6E381E1F9567002FDD68 /* BABaseViewController.m in Sources */,
+				C4909A751E25FCAE009D533F /* CoreLaunchLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C4D472271E1F472400438D98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4D472281E1F472400438D98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

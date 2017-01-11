@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+BAQMUI.h"
+#import "AppDelegate+BALaunch.h"
 
 #import "BAHomeVC.h"
 #import "BAMeVC.h"
@@ -38,6 +39,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [self ba_creatTabbarController];
+    
+    /*! 自定义启动动画 */
+    [self ba_setupLaunch];
+//    [self ba_launchAnimationWithType:BALaunchAnimationTypeCool];
+
 }
 
 - (void)ba_creatTabbarController
@@ -67,7 +73,6 @@
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.

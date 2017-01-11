@@ -21,6 +21,20 @@
 
 @implementation BAHomeVC
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -91,6 +105,8 @@
     {
         UIViewController *vc = class.new;
         vc.title = self.titlesArray[indexPath.row];
+        /*! 转场动画 */
+        [self ba_animationWithBATransitionType:BATransitionTypeRippleEffect animationView:self.navigationController.view];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

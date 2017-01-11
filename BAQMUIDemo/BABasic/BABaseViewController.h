@@ -12,4 +12,14 @@
 
 - (void)setupUI;
 
+
+/*！
+ 自定义动画样式
+
+ @param type 动画样式
+ @param animationView 需要动画的 View
+ */
+- (void)ba_animationWithBATransitionType:(BATransitionType)type
+                           animationView:(UIView *)animationView;
+
 @end
