@@ -71,6 +71,7 @@
 		C47DA9C91E24C444001E0FB7 /* BABaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9C81E24C444001E0FB7 /* BABaseListViewController.m */; };
 		C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */; };
 		C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9D31E24E099001E0FB7 /* BACustomToastContentView.m */; };
+		C4909A401E25D0FB009D533F /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A3F1E25D0FB009D533F /* UIImageEffects.m */; };
 		C4D472201E1F472400438D98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4721F1E1F472400438D98 /* main.m */; };
 		C4D472231E1F472400438D98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D472221E1F472400438D98 /* AppDelegate.m */; };
 		C4D472291E1F472400438D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D472271E1F472400438D98 /* Main.storyboard */; };
@@ -164,6 +165,8 @@
 		C47DA9D11E24DA59001E0FB7 /* BADefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADefine.h; sourceTree = "<group>"; };
 		C47DA9D21E24E099001E0FB7 /* BACustomToastContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomToastContentView.h; sourceTree = "<group>"; };
 		C47DA9D31E24E099001E0FB7 /* BACustomToastContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomToastContentView.m; sourceTree = "<group>"; };
+		C4909A3E1E25D0FB009D533F /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		C4909A3F1E25D0FB009D533F /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		C4D4721B1E1F472400438D98 /* BAQMUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAQMUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D4721F1E1F472400438D98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D472211E1F472400438D98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 				C44A6E401E1F9896002FDD68 /* BAUIHelper.m */,
 				C4ED707E1E236D6200DBFE65 /* BAQMUIColor.h */,
 				C47DA9D11E24DA59001E0FB7 /* BADefine.h */,
+				C4909A3E1E25D0FB009D533F /* UIImageEffects.h */,
+				C4909A3F1E25D0FB009D533F /* UIImageEffects.m */,
 			);
 			path = BACommon;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 				C47DA9C01E24C2DE001E0FB7 /* DemoVC1_cell.m in Sources */,
 				C4D472201E1F472400438D98 /* main.m in Sources */,
 				C47DA9C51E24C39E001E0FB7 /* DemoVC2.m in Sources */,
+				C4909A401E25D0FB009D533F /* UIImageEffects.m in Sources */,
 				C44A6E311E1F93F8002FDD68 /* BATabBarViewController.m in Sources */,
 				C47DA9BE1E24C2DE001E0FB7 /* DemoVC1.m in Sources */,
 				C44A6E381E1F9567002FDD68 /* BABaseViewController.m in Sources */,

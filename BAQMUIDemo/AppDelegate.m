@@ -36,8 +36,11 @@
 #pragma mark - QMUI的配置
 - (void)ba_setupQMUI
 {
-    /*! 启动QMUI的配置模板 */
-    [QMUIConfigurationTemplate setupConfigurationTemplate];
+    /*! 启动 QMUI 的配置模板 */
+//    [QMUIConfigurationTemplate setupConfigurationTemplate];
+    
+    /*! 自定义 QMUI 的配置模板 */
+    [BAUIHelper ba_setupConfigurationTemplate];
     
     /*! 将全局的控件样式渲染出来 */
     [QMUIConfigurationManager renderGlobalAppearances];

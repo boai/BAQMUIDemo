@@ -10,6 +10,8 @@
 
 @interface BAUIHelper : NSObject
 
++ (void)ba_setupConfigurationTemplate;
+
 @end
 
 @interface BAUIHelper (QMUIModalPresentationViewController)
