@@ -41,9 +41,8 @@
     [self ba_creatTabbarController];
     
     /*! 自定义启动动画 */
-    [self ba_setupLaunch];
-//    [self ba_launchAnimationWithType:BALaunchAnimationTypeCool];
-
+//    [self ba_setupLaunch];
+    [self ba_launchAnimationWithType:BALaunchAnimationTypeCool];
 }
 
 - (void)ba_creatTabbarController

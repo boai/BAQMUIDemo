@@ -80,22 +80,19 @@
 
 - (void)ba_launchAnimationWithType:(BALaunchAnimationType)type
 {
-//    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    
     switch (type) {
         case BALaunchAnimationTypeLite:
-            [CoreLaunchLite animWithWindow:self.window image:nil];
+            [CoreLaunchLite animWithWindow:self.window image:UIImageMake(@"launch_background")];
             break;
         case BALaunchAnimationTypePlus:
-            [CoreLaunchPlus animWithWindow:self.window image:nil];
+            [CoreLaunchPlus animWithWindow:self.window image:UIImageMake(@"launch_background")];
             break;
         case BALaunchAnimationTypeCool:
-            [CoreLaunchCool animWithWindow:self.window image:nil];
+            [CoreLaunchCool animWithWindow:self.window image:UIImageMake(@"launch_background")];
             break;
         case BALaunchAnimationTypePro:
-            [CoreLaunchPro animWithWindow:self.window image:nil];
+            [CoreLaunchPro animWithWindow:self.window image:UIImageMake(@"launch_background")];
             break;
-
             
         default:
             break;
