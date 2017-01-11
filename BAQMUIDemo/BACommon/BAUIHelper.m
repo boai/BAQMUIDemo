@@ -42,29 +42,29 @@
 
 + (QMUIButton *)ba_uiHelper_generateDarkFilledButton
 {
-    QMUIButton *button = [[QMUIButton alloc] initWithFrame:CGRectMakeWithSize(CGSizeMake(200, 40))];
+    QMUIButton *button                 = [[QMUIButton alloc] initWithFrame:CGRectMakeWithSize(CGSizeMake(200, 40))];
     button.adjustsImageWhenHighlighted = YES;
-    button.titleLabel.font = UIFontBoldMake(14);
+    button.titleLabel.font             = UIFontBoldMake(14);
     [button setTitleColor:UIColorWhite forState:UIControlStateNormal];
-    button.backgroundColor = UIColorGreen;
-    button.highlightedBackgroundColor = UIColorMake(0, 168, 255);
-    button.layer.cornerRadius = 5.0f;
+    button.backgroundColor             = UIColorGreen;
+    button.highlightedBackgroundColor  = UIColorMake(0, 168, 255);
+    button.layer.cornerRadius          = 5.0f;
     
     return button;
 }
 
 + (QMUIButton *)ba_uiHelper_generateLightBorderedButton
 {
-    QMUIButton *button = [[QMUIButton alloc] initWithFrame:CGRectMakeWithSize(CGSizeMake(200, 40))];
+    QMUIButton *button                 = [[QMUIButton alloc] initWithFrame:CGRectMakeWithSize(CGSizeMake(200, 40))];
     button.adjustsImageWhenHighlighted = YES;
-    button.titleLabel.font = UIFontBoldMake(14);
+    button.titleLabel.font             = UIFontBoldMake(14);
     [button setTitleColor:UIColorGreen forState:UIControlStateNormal];
-    button.backgroundColor = UIColorMake(235, 249, 255);
-    button.highlightedBackgroundColor = UIColorMake(211, 239, 252);
-    button.layer.cornerRadius = 5.0f;
-    button.layer.borderColor = UIColorMake(142, 219, 249).CGColor;
-    button.layer.borderWidth = 1.0f;
-    button.highlightedBorderColor = UIColorMake(0, 168, 225);
+    button.backgroundColor             = UIColorMake(235, 249, 255);
+    button.highlightedBackgroundColor  = UIColorMake(211, 239, 252);
+    button.layer.cornerRadius          = 5.0f;
+    button.layer.borderColor           = UIColorMake(142, 219, 249).CGColor;
+    button.layer.borderWidth           = 1.0f;
+    button.highlightedBorderColor      = UIColorMake(0, 168, 225);
     
     return button;
 }

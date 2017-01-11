@@ -18,10 +18,10 @@ static CGFloat const kContentMargin_bottom   = 6;
 
 @interface DemoVC1_cell ()
 
-@property (nonatomic, strong) UIImageView *userImageView;
-@property (nonatomic, strong) UILabel *nameLabel;
-@property (nonatomic, strong) UILabel *contentLabel;
-@property (nonatomic, strong) UILabel *timeLabel;
+@property (nonatomic, strong) UIImageView  *userImageView;
+@property (nonatomic, strong) UILabel      *nameLabel;
+@property (nonatomic, strong) UILabel      *contentLabel;
+@property (nonatomic, strong) UILabel      *timeLabel;
 
 @end
 
@@ -39,21 +39,21 @@ static CGFloat const kContentMargin_bottom   = 6;
 - (void)setupSubViews
 {
 //    UIImage *userImage = [UIImage qmui_imageWithStrokeColor:[UIColor qmui_randomColor] size:CGSizeMake(kUserImageSize, kUserImageSize) lineWidth:3.0f cornerRadius:kUserImageSize/2];
-    _userImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kInsets.left, kInsets.top, kUserImageSize, kUserImageSize)];
+    _userImageView                  = [[UIImageView alloc] initWithFrame:CGRectMake(kInsets.left, kInsets.top, kUserImageSize, kUserImageSize)];
 
-    _nameLabel = [[UILabel alloc] init];
-    self.nameLabel.font = UIFontBoldMake(16);
-    self.nameLabel.textColor = UIColorGray2;
+    _nameLabel                      = [[UILabel alloc] init];
+    self.nameLabel.font             = UIFontBoldMake(16);
+    self.nameLabel.textColor        = UIColorGray2;
     
-    _contentLabel = [[UILabel alloc] init];
-    self.contentLabel.font = UIFontMake(17);
-    self.contentLabel.textColor = UIColorGray1;
+    _contentLabel                   = [[UILabel alloc] init];
+    self.contentLabel.font          = UIFontMake(17);
+    self.contentLabel.textColor     = UIColorGray1;
     self.contentLabel.textAlignment = NSTextAlignmentJustified;
     self.contentLabel.numberOfLines = 0;
     
-    _timeLabel = [[UILabel alloc] init];
-    self.timeLabel.font = UIFontMake(12);
-    self.timeLabel.textColor = UIColorGray;
+    _timeLabel                      = [[UILabel alloc] init];
+    self.timeLabel.font             = UIFontMake(12);
+    self.timeLabel.textColor        = UIColorGray;
     
     [self.contentView addSubview:self.userImageView];
     [self.contentView addSubview:self.nameLabel];
@@ -65,14 +65,14 @@ static CGFloat const kContentMargin_bottom   = 6;
 {
     _model = model;
     
-    self.nameLabel.text = model.userName;
-    self.userImageView.image = UIImageMake(model.userImageUrl);
+    self.nameLabel.text              = model.userName;
+    self.userImageView.image         = UIImageMake(model.userImageUrl);
     self.contentLabel.attributedText = [self ba_attributedStringWithText:model.content lineHeight:25];
-    self.timeLabel.text = model.time;
-//    self.timeLabel.text = @"去年 16：55";
+    self.timeLabel.text              = model.time;
+//    self.timeLabel.text            = @"去年 16：55";
 
     /*! 在一个段落的最后一行自然对齐 */
-    self.contentLabel.textAlignment = NSTextAlignmentJustified;
+    self.contentLabel.textAlignment  = NSTextAlignmentJustified;
     
     [self setNeedsLayout];
 }
@@ -105,9 +105,9 @@ static CGFloat const kContentMargin_bottom   = 6;
  */
 - (CGSize)sizeThatFits:(CGSize)size
 {
-    CGSize cellSize = CGSizeMake(size.width, 0);
+    CGSize cellSize      = CGSizeMake(size.width, 0);
     CGFloat content_With = size.width - UIEdgeInsetsGetHorizontalValue(kInsets);
-    CGFloat cellHeight = UIEdgeInsetsGetHorizontalValue(kInsets) + CGRectGetHeight(self.userImageView.bounds) + kUserImageMargin_bottom;
+    CGFloat cellHeight   = UIEdgeInsetsGetHorizontalValue(kInsets) + CGRectGetHeight(self.userImageView.bounds) + kUserImageMargin_bottom;
     
     if (self.contentLabel.text.length > 0)
     {

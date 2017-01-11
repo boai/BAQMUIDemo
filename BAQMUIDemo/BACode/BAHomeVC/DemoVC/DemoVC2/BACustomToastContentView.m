@@ -26,23 +26,23 @@ static CGFloat const kTextLabelMarginBottom = 4;
 
 - (void)setupSubViews
 {
-    _imageView = [[UIImageView alloc] init];
-    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
-    self.imageView.clipsToBounds = YES;
-    self.imageView.layer.cornerRadius = 4;
+    _imageView                         = [[UIImageView alloc] init];
+    self.imageView.contentMode         = UIViewContentModeScaleAspectFill;
+    self.imageView.clipsToBounds       = YES;
+    self.imageView.layer.cornerRadius  = 4;
     
-    _titleLabel = [[UILabel alloc] init];
-    self.titleLabel.textColor = UIColorWhite;
-    self.titleLabel.font = UIFontBoldMake(17);
-    self.titleLabel.opaque = NO;
+    _titleLabel                        = [[UILabel alloc] init];
+    self.titleLabel.textColor          = UIColorWhite;
+    self.titleLabel.font               = UIFontBoldMake(17);
+    self.titleLabel.opaque             = NO;
     
-    _detailTextLabel = [[UILabel alloc] init];
+    _detailTextLabel                   = [[UILabel alloc] init];
     self.detailTextLabel.numberOfLines = 0;
     self.detailTextLabel.textAlignment = NSTextAlignmentJustified;
     self.detailTextLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-    self.detailTextLabel.textColor = UIColorWhite;
-    self.detailTextLabel.font = UIFontMake(14);
-    self.detailTextLabel.opaque = NO;
+    self.detailTextLabel.textColor     = UIColorWhite;
+    self.detailTextLabel.font          = UIFontMake(14);
+    self.detailTextLabel.opaque        = NO;
     
     [self addSubview:self.imageView];
     [self addSubview:self.titleLabel];
