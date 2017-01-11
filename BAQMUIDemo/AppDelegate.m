@@ -7,10 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
-#import <QMUITabBarViewController.h>
-#import <QMUINavigationController.h>
-#import <QMUIConfigurationTemplate.h>
+#import "AppDelegate+BAQMUI.h"
 
 #import "BAHomeVC.h"
 #import "BAMeVC.h"
@@ -25,39 +22,22 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    /*! QMUI的配置 */
-    [self ba_setupQMUI];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [self ba_setupAppDelegate];
     
     return YES;
 }
 
-#pragma mark - QMUI的配置
-- (void)ba_setupQMUI
+#pragma mark - 系统配置
+- (void)ba_setupAppDelegate
 {
-    /*! 启动 QMUI 的配置模板 */
-//    [QMUIConfigurationTemplate setupConfigurationTemplate];
-    
-    /*! 自定义 QMUI 的配置模板 */
-    [BAUIHelper ba_setupConfigurationTemplate];
-    
-    /*! 将全局的控件样式渲染出来 */
-    [QMUIConfigurationManager renderGlobalAppearances];
-    
-    /*! 将状态栏设置为希望的样式 */
-    [QMUIHelper renderStatusBarStyleLight];
-    
-    /*! 预加载 QQ 表情，避免第一次使用时卡顿 */
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [QMUIQQEmotionManager emotionsForQQ];
-    });
-    
+    /*! QMUI 的配置 */
+    [self ba_setupQMUI];
     /*! 界面 */
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [self ba_creatTabbarController];
-    
 }
 
 - (void)ba_creatTabbarController
