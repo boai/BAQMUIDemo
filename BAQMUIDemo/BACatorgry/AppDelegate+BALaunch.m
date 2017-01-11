@@ -31,11 +31,11 @@
 
 - (void)ba_setupLaunch
 {
-    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
-    UIView *launchView = viewController.view;
-    
-    launchView.frame = self.window.bounds;
-    [self.window addSubview:launchView];
+//    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+//    UIView *launchView = viewController.view;
+//    
+//    launchView.frame = self.window.bounds;
+//    [self.window addSubview:launchView];
     
 #pragma mark - 第一种动画
 //    UIImageView *backgroundImageView = launchView.subviews[0];
@@ -44,8 +44,8 @@
 //    backgroundImageView.clipsToBounds = YES;
     
 //    UIImageView *logoImageView = launchView.subviews[1];
-    NSLog(@"0000 : %@", launchView.subviews);
-    UILabel *copyrightLabel = launchView.subviews[2];
+//    NSLog(@"0000 : %@", launchView.subviews);
+//    UILabel *copyrightLabel = launchView.subviews[2];
 //    
 //    UIView *maskView = [[UIView alloc] initWithFrame:launchView.bounds];
 //    maskView.backgroundColor = UIColorWhite;
@@ -65,6 +65,12 @@
 
 #pragma mark - 第二种动画
     
+    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    UIView *launchView = viewController.view;
+    
+    launchView.frame = self.window.bounds;
+    [self.window addSubview:launchView];
+    
     [UIView animateWithDuration:1.0f delay:0.5f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
 //        backgroundImageView.frame = CGRectMake(0, 0, CGRectGetWidth(backgroundImageView.bounds), 64);
 //        logoImageView.alpha = 0.0;
@@ -72,7 +78,7 @@
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:1.0f delay:0.5f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
             launchView.alpha = 0.0f;
-//            launchView.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0f, 2.0f, 1.0f);
+            launchView.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0f, 2.0f, 1.0f);
          } completion:^(BOOL finished) {
                 [launchView removeFromSuperview];
          }];
