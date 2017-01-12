@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C406A99E1E2751F800F7F432 /* BAActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C406A9911E2751F800F7F432 /* BAActivityIndicatorView.m */; };
+		C406A99F1E2751F800F7F432 /* BALoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C406A9931E2751F800F7F432 /* BALoadingView.m */; };
+		C406A9A01E2751F800F7F432 /* BALoadingWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C406A9951E2751F800F7F432 /* BALoadingWaveView.m */; };
+		C406A9A11E2751F800F7F432 /* UIView+BATransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C406A9981E2751F800F7F432 /* UIView+BATransition.m */; };
+		C406A9A21E2751F800F7F432 /* UIView+BAAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C406A99B1E2751F800F7F432 /* UIView+BAAnimation.m */; };
+		C406A9A51E27522300F7F432 /* UIView+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C406A9A41E27522300F7F432 /* UIView+BAKit.m */; };
+		C406A9AF1E2753CF00F7F432 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C406A9AE1E2753CF00F7F432 /* UIImageEffects.m */; };
 		C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E261E1F939D002FDD68 /* BAHomeVC.m */; };
 		C44A6E291E1F939D002FDD68 /* BAHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44A6E271E1F939D002FDD68 /* BAHomeVC.xib */; };
 		C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E2B1E1F93AD002FDD68 /* BAMeVC.m */; };
@@ -71,7 +78,6 @@
 		C47DA9C91E24C444001E0FB7 /* BABaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9C81E24C444001E0FB7 /* BABaseListViewController.m */; };
 		C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */; };
 		C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C47DA9D31E24E099001E0FB7 /* BACustomToastContentView.m */; };
-		C4909A401E25D0FB009D533F /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A3F1E25D0FB009D533F /* UIImageEffects.m */; };
 		C4909A431E25D5B7009D533F /* AppDelegate+BAQMUI.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A421E25D5B7009D533F /* AppDelegate+BAQMUI.m */; };
 		C4909A461E25DF7B009D533F /* AppDelegate+BALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A451E25DF7B009D533F /* AppDelegate+BALaunch.m */; };
 		C4909A6F1E25FCAE009D533F /* CALayer+Cool.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A4A1E25FCAE009D533F /* CALayer+Cool.m */; };
@@ -86,16 +92,10 @@
 		C4909A7C1E25FCAE009D533F /* UINavigationController+PortalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A6A1E25FCAE009D533F /* UINavigationController+PortalTransition.m */; };
 		C4909A7D1E25FCAE009D533F /* UIViewController+PortalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A6C1E25FCAE009D533F /* UIViewController+PortalTransition.m */; };
 		C4909A7E1E25FCAE009D533F /* ProVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A6E1E25FCAE009D533F /* ProVC.m */; };
-		C4909A921E2601B6009D533F /* BAActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A871E2601B6009D533F /* BAActivityIndicatorView.m */; };
-		C4909A931E2601B6009D533F /* BALoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A891E2601B6009D533F /* BALoadingView.m */; };
-		C4909A941E2601B6009D533F /* BALoadingWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A8B1E2601B6009D533F /* BALoadingWaveView.m */; };
-		C4909A951E2601B6009D533F /* UIView+BATransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A8E1E2601B6009D533F /* UIView+BATransition.m */; };
-		C4909A961E2601B6009D533F /* UIView+BAAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4909A911E2601B6009D533F /* UIView+BAAnimation.m */; };
 		C4D472201E1F472400438D98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4721F1E1F472400438D98 /* main.m */; };
 		C4D472231E1F472400438D98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D472221E1F472400438D98 /* AppDelegate.m */; };
 		C4D4722B1E1F472400438D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722A1E1F472400438D98 /* Assets.xcassets */; };
 		C4D4722E1E1F472400438D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */; };
-		C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */; };
 		EC8AAABE7AF79A925E2663B4 /* libPods-BAQMUIDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C07FA7485D4F66D719D615E4 /* libPods-BAQMUIDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +103,28 @@
 		02D1CD00C3BF72A28F70BCE6 /* Pods-BAQMUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAQMUIDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAQMUIDemo/Pods-BAQMUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		63260277B1C0B9ECEC147178 /* Pods-BAQMUIDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAQMUIDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAQMUIDemo/Pods-BAQMUIDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C07FA7485D4F66D719D615E4 /* libPods-BAQMUIDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAQMUIDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C406A98E1E2751F800F7F432 /* BAAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAnimation.h; sourceTree = "<group>"; };
+		C406A9901E2751F800F7F432 /* BAActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAActivityIndicatorView.h; sourceTree = "<group>"; };
+		C406A9911E2751F800F7F432 /* BAActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAActivityIndicatorView.m; sourceTree = "<group>"; };
+		C406A9921E2751F800F7F432 /* BALoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALoadingView.h; sourceTree = "<group>"; };
+		C406A9931E2751F800F7F432 /* BALoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALoadingView.m; sourceTree = "<group>"; };
+		C406A9941E2751F800F7F432 /* BALoadingWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALoadingWaveView.h; sourceTree = "<group>"; };
+		C406A9951E2751F800F7F432 /* BALoadingWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALoadingWaveView.m; sourceTree = "<group>"; };
+		C406A9971E2751F800F7F432 /* UIView+BATransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BATransition.h"; sourceTree = "<group>"; };
+		C406A9981E2751F800F7F432 /* UIView+BATransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BATransition.m"; sourceTree = "<group>"; };
+		C406A99A1E2751F800F7F432 /* UIView+BAAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAAnimation.h"; sourceTree = "<group>"; };
+		C406A99B1E2751F800F7F432 /* UIView+BAAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAAnimation.m"; sourceTree = "<group>"; };
+		C406A9A31E27522300F7F432 /* UIView+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAKit.h"; sourceTree = "<group>"; };
+		C406A9A41E27522300F7F432 /* UIView+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAKit.m"; sourceTree = "<group>"; };
+		C406A9A61E27526400F7F432 /* BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit.h; sourceTree = "<group>"; };
+		C406A9A71E27527800F7F432 /* BACustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustom.h; sourceTree = "<group>"; };
+		C406A9A81E2752B700F7F432 /* BAUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAUIKit.h; sourceTree = "<group>"; };
+		C406A9A91E2752CB00F7F432 /* BAFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAFoundation.h; sourceTree = "<group>"; };
+		C406A9AB1E27538C00F7F432 /* BADefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADefine.h; sourceTree = "<group>"; };
+		C406A9AC1E27538C00F7F432 /* BAColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAColorDefine.h; sourceTree = "<group>"; };
+		C406A9AD1E2753CF00F7F432 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		C406A9AE1E2753CF00F7F432 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
+		C406A9B01E27543F00F7F432 /* BACommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACommonDefine.h; sourceTree = "<group>"; };
 		C44A6E1C1E1F919B002FDD68 /* BAQMUI.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAQMUI.pch; sourceTree = "<group>"; };
 		C44A6E251E1F939D002FDD68 /* BAHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAHomeVC.h; sourceTree = "<group>"; };
 		C44A6E261E1F939D002FDD68 /* BAHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAHomeVC.m; sourceTree = "<group>"; };
@@ -180,11 +202,8 @@
 		C47DA9C81E24C444001E0FB7 /* BABaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BABaseListViewController.m; sourceTree = "<group>"; };
 		C47DA9CA1E24D5E4001E0FB7 /* BACustomToastAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomToastAnimator.h; sourceTree = "<group>"; };
 		C47DA9CB1E24D5E4001E0FB7 /* BACustomToastAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomToastAnimator.m; sourceTree = "<group>"; };
-		C47DA9D11E24DA59001E0FB7 /* BADefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADefine.h; sourceTree = "<group>"; };
 		C47DA9D21E24E099001E0FB7 /* BACustomToastContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomToastContentView.h; sourceTree = "<group>"; };
 		C47DA9D31E24E099001E0FB7 /* BACustomToastContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomToastContentView.m; sourceTree = "<group>"; };
-		C4909A3E1E25D0FB009D533F /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
-		C4909A3F1E25D0FB009D533F /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		C4909A411E25D5B7009D533F /* AppDelegate+BAQMUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BAQMUI.h"; sourceTree = "<group>"; };
 		C4909A421E25D5B7009D533F /* AppDelegate+BAQMUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BAQMUI.m"; sourceTree = "<group>"; };
 		C4909A441E25DF7B009D533F /* AppDelegate+BALaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BALaunch.h"; sourceTree = "<group>"; };
@@ -213,17 +232,6 @@
 		C4909A6C1E25FCAE009D533F /* UIViewController+PortalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PortalTransition.m"; sourceTree = "<group>"; };
 		C4909A6D1E25FCAE009D533F /* ProVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProVC.h; sourceTree = "<group>"; };
 		C4909A6E1E25FCAE009D533F /* ProVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProVC.m; sourceTree = "<group>"; };
-		C4909A861E2601B6009D533F /* BAActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAActivityIndicatorView.h; sourceTree = "<group>"; };
-		C4909A871E2601B6009D533F /* BAActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAActivityIndicatorView.m; sourceTree = "<group>"; };
-		C4909A881E2601B6009D533F /* BALoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALoadingView.h; sourceTree = "<group>"; };
-		C4909A891E2601B6009D533F /* BALoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALoadingView.m; sourceTree = "<group>"; };
-		C4909A8A1E2601B6009D533F /* BALoadingWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALoadingWaveView.h; sourceTree = "<group>"; };
-		C4909A8B1E2601B6009D533F /* BALoadingWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALoadingWaveView.m; sourceTree = "<group>"; };
-		C4909A8D1E2601B6009D533F /* UIView+BATransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BATransition.h"; sourceTree = "<group>"; };
-		C4909A8E1E2601B6009D533F /* UIView+BATransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BATransition.m"; sourceTree = "<group>"; };
-		C4909A901E2601B6009D533F /* UIView+BAAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAAnimation.h"; sourceTree = "<group>"; };
-		C4909A911E2601B6009D533F /* UIView+BAAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAAnimation.m"; sourceTree = "<group>"; };
-		C4909A971E2601C1009D533F /* BAAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAAnimation.h; sourceTree = "<group>"; };
 		C4D4721B1E1F472400438D98 /* BAQMUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAQMUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D4721F1E1F472400438D98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D472211E1F472400438D98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -231,9 +239,6 @@
 		C4D4722A1E1F472400438D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D4722D1E1F472400438D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D4722F1E1F472400438D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4ED707E1E236D6200DBFE65 /* BAQMUIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAQMUIColor.h; sourceTree = "<group>"; };
-		C4ED70821E23878E00DBFE65 /* UIView+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAKit.h"; sourceTree = "<group>"; };
-		C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,11 +270,102 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C406A98B1E2751F800F7F432 /* BAKit */ = {
+			isa = PBXGroup;
+			children = (
+				C406A9A61E27526400F7F432 /* BAKit.h */,
+				C406A9AA1E27536400F7F432 /* BADefine */,
+				C406A98C1E2751F800F7F432 /* BACustom */,
+				C406A99C1E2751F800F7F432 /* Foundation */,
+				C406A99D1E2751F800F7F432 /* UIKit */,
+			);
+			path = BAKit;
+			sourceTree = "<group>";
+		};
+		C406A98C1E2751F800F7F432 /* BACustom */ = {
+			isa = PBXGroup;
+			children = (
+				C406A9A71E27527800F7F432 /* BACustom.h */,
+				C406A98D1E2751F800F7F432 /* BAAnimation */,
+			);
+			path = BACustom;
+			sourceTree = "<group>";
+		};
+		C406A98D1E2751F800F7F432 /* BAAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C406A98E1E2751F800F7F432 /* BAAnimation.h */,
+				C406A98F1E2751F800F7F432 /* BALoadingView */,
+				C406A9961E2751F800F7F432 /* BATransition */,
+				C406A9991E2751F800F7F432 /* BAUIViewAnimation */,
+			);
+			path = BAAnimation;
+			sourceTree = "<group>";
+		};
+		C406A98F1E2751F800F7F432 /* BALoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				C406A9901E2751F800F7F432 /* BAActivityIndicatorView.h */,
+				C406A9911E2751F800F7F432 /* BAActivityIndicatorView.m */,
+				C406A9921E2751F800F7F432 /* BALoadingView.h */,
+				C406A9931E2751F800F7F432 /* BALoadingView.m */,
+				C406A9941E2751F800F7F432 /* BALoadingWaveView.h */,
+				C406A9951E2751F800F7F432 /* BALoadingWaveView.m */,
+			);
+			path = BALoadingView;
+			sourceTree = "<group>";
+		};
+		C406A9961E2751F800F7F432 /* BATransition */ = {
+			isa = PBXGroup;
+			children = (
+				C406A9971E2751F800F7F432 /* UIView+BATransition.h */,
+				C406A9981E2751F800F7F432 /* UIView+BATransition.m */,
+			);
+			path = BATransition;
+			sourceTree = "<group>";
+		};
+		C406A9991E2751F800F7F432 /* BAUIViewAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C406A99A1E2751F800F7F432 /* UIView+BAAnimation.h */,
+				C406A99B1E2751F800F7F432 /* UIView+BAAnimation.m */,
+			);
+			path = BAUIViewAnimation;
+			sourceTree = "<group>";
+		};
+		C406A99C1E2751F800F7F432 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				C406A9A91E2752CB00F7F432 /* BAFoundation.h */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		C406A99D1E2751F800F7F432 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C406A9A81E2752B700F7F432 /* BAUIKit.h */,
+				C406A9A31E27522300F7F432 /* UIView+BAKit.h */,
+				C406A9A41E27522300F7F432 /* UIView+BAKit.m */,
+				C406A9AD1E2753CF00F7F432 /* UIImageEffects.h */,
+				C406A9AE1E2753CF00F7F432 /* UIImageEffects.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		C406A9AA1E27536400F7F432 /* BADefine */ = {
+			isa = PBXGroup;
+			children = (
+				C406A9AB1E27538C00F7F432 /* BADefine.h */,
+				C406A9B01E27543F00F7F432 /* BACommonDefine.h */,
+				C406A9AC1E27538C00F7F432 /* BAColorDefine.h */,
+			);
+			path = BADefine;
+			sourceTree = "<group>";
+		};
 		C44A6E131E1F913A002FDD68 /* BACatorgry */ = {
 			isa = PBXGroup;
 			children = (
-				C4ED70821E23878E00DBFE65 /* UIView+BAKit.h */,
-				C4ED70831E23878E00DBFE65 /* UIView+BAKit.m */,
 				C4909A411E25D5B7009D533F /* AppDelegate+BAQMUI.h */,
 				C4909A421E25D5B7009D533F /* AppDelegate+BAQMUI.m */,
 				C4909A441E25DF7B009D533F /* AppDelegate+BALaunch.h */,
@@ -292,10 +388,6 @@
 			children = (
 				C44A6E3F1E1F9896002FDD68 /* BAUIHelper.h */,
 				C44A6E401E1F9896002FDD68 /* BAUIHelper.m */,
-				C4ED707E1E236D6200DBFE65 /* BAQMUIColor.h */,
-				C47DA9D11E24DA59001E0FB7 /* BADefine.h */,
-				C4909A3E1E25D0FB009D533F /* UIImageEffects.h */,
-				C4909A3F1E25D0FB009D533F /* UIImageEffects.m */,
 			);
 			path = BACommon;
 			sourceTree = "<group>";
@@ -303,7 +395,7 @@
 		C44A6E181E1F913A002FDD68 /* BALib */ = {
 			isa = PBXGroup;
 			children = (
-				C4909A841E2601B6009D533F /* BAAnimation */,
+				C406A98B1E2751F800F7F432 /* BAKit */,
 				C4909A471E25FCAE009D533F /* CoreLaunch */,
 			);
 			path = BALib;
@@ -587,48 +679,6 @@
 			path = PortalTransition;
 			sourceTree = "<group>";
 		};
-		C4909A841E2601B6009D533F /* BAAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C4909A971E2601C1009D533F /* BAAnimation.h */,
-				C4909A851E2601B6009D533F /* BALoadingView */,
-				C4909A8C1E2601B6009D533F /* BATransition */,
-				C4909A8F1E2601B6009D533F /* BAUIViewAnimation */,
-			);
-			path = BAAnimation;
-			sourceTree = "<group>";
-		};
-		C4909A851E2601B6009D533F /* BALoadingView */ = {
-			isa = PBXGroup;
-			children = (
-				C4909A861E2601B6009D533F /* BAActivityIndicatorView.h */,
-				C4909A871E2601B6009D533F /* BAActivityIndicatorView.m */,
-				C4909A881E2601B6009D533F /* BALoadingView.h */,
-				C4909A891E2601B6009D533F /* BALoadingView.m */,
-				C4909A8A1E2601B6009D533F /* BALoadingWaveView.h */,
-				C4909A8B1E2601B6009D533F /* BALoadingWaveView.m */,
-			);
-			path = BALoadingView;
-			sourceTree = "<group>";
-		};
-		C4909A8C1E2601B6009D533F /* BATransition */ = {
-			isa = PBXGroup;
-			children = (
-				C4909A8D1E2601B6009D533F /* UIView+BATransition.h */,
-				C4909A8E1E2601B6009D533F /* UIView+BATransition.m */,
-			);
-			path = BATransition;
-			sourceTree = "<group>";
-		};
-		C4909A8F1E2601B6009D533F /* BAUIViewAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C4909A901E2601B6009D533F /* UIView+BAAnimation.h */,
-				C4909A911E2601B6009D533F /* UIView+BAAnimation.m */,
-			);
-			path = BAUIViewAnimation;
-			sourceTree = "<group>";
-		};
 		C4D472121E1F472400438D98 = {
 			isa = PBXGroup;
 			children = (
@@ -852,23 +902,23 @@
 				C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */,
 				C4909A431E25D5B7009D533F /* AppDelegate+BAQMUI.m in Sources */,
 				C4D472231E1F472400438D98 /* AppDelegate.m in Sources */,
-				C4909A961E2601B6009D533F /* UIView+BAAnimation.m in Sources */,
+				C406A9A21E2751F800F7F432 /* UIView+BAAnimation.m in Sources */,
 				C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */,
 				C4909A771E25FCAE009D533F /* CoreLaunchPro.m in Sources */,
 				C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */,
-				C4ED70841E23878E00DBFE65 /* UIView+BAKit.m in Sources */,
 				C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */,
 				C47DA9C11E24C2DE001E0FB7 /* DemoVC1_model.m in Sources */,
 				C4909A7D1E25FCAE009D533F /* UIViewController+PortalTransition.m in Sources */,
-				C4909A951E2601B6009D533F /* UIView+BATransition.m in Sources */,
+				C406A9A11E2751F800F7F432 /* UIView+BATransition.m in Sources */,
 				C4909A7E1E25FCAE009D533F /* ProVC.m in Sources */,
-				C4909A921E2601B6009D533F /* BAActivityIndicatorView.m in Sources */,
+				C406A99E1E2751F800F7F432 /* BAActivityIndicatorView.m in Sources */,
 				C4909A701E25FCAE009D533F /* CoreLaunchCool.m in Sources */,
 				C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */,
 				C47DA9C91E24C444001E0FB7 /* BABaseListViewController.m in Sources */,
 				C4909A461E25DF7B009D533F /* AppDelegate+BALaunch.m in Sources */,
-				C4909A931E2601B6009D533F /* BALoadingView.m in Sources */,
+				C406A99F1E2751F800F7F432 /* BALoadingView.m in Sources */,
 				C4909A6F1E25FCAE009D533F /* CALayer+Cool.m in Sources */,
+				C406A9A51E27522300F7F432 /* UIView+BAKit.m in Sources */,
 				C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */,
 				C4909A791E25FCAE009D533F /* CYPortalTransitionAnimator.m in Sources */,
 				C4909A7C1E25FCAE009D533F /* UINavigationController+PortalTransition.m in Sources */,
@@ -878,11 +928,11 @@
 				C47DA9C01E24C2DE001E0FB7 /* DemoVC1_cell.m in Sources */,
 				C4D472201E1F472400438D98 /* main.m in Sources */,
 				C47DA9C51E24C39E001E0FB7 /* DemoVC2.m in Sources */,
-				C4909A401E25D0FB009D533F /* UIImageEffects.m in Sources */,
 				C4909A781E25FCAE009D533F /* CYNavigationControllerDelegate.m in Sources */,
+				C406A9AF1E2753CF00F7F432 /* UIImageEffects.m in Sources */,
 				C4909A761E25FCAE009D533F /* CoreLaunchPlus.m in Sources */,
 				C44A6E311E1F93F8002FDD68 /* BATabBarViewController.m in Sources */,
-				C4909A941E2601B6009D533F /* BALoadingWaveView.m in Sources */,
+				C406A9A01E2751F800F7F432 /* BALoadingWaveView.m in Sources */,
 				C47DA9BE1E24C2DE001E0FB7 /* DemoVC1.m in Sources */,
 				C44A6E381E1F9567002FDD68 /* BABaseViewController.m in Sources */,
 				C4909A751E25FCAE009D533F /* CoreLaunchLite.m in Sources */,

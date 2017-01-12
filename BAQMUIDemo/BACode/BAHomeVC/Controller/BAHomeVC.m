@@ -46,6 +46,7 @@
 - (void)setupUI
 {
     self.tableView.hidden = NO;
+    
     [self creatDatas];
 }
 

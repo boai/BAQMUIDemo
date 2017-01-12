@@ -46,7 +46,7 @@
     UIImageView *logoImageView = launchView.subviews[1];
     UILabel *copyrightLabel = launchView.subviews[2];
     copyrightLabel.alpha = 0;
-
+    logoImageView = logoImageView;
 //    UIView *maskView = [[UIView alloc] initWithFrame:launchView.bounds];
 //    maskView.backgroundColor = UIColorWhite;
 //    [launchView insertSubview:maskView belowSubview:backgroundImageView];

@@ -25,13 +25,8 @@
 #import <QMUIKit/QMUIKit.h>
 
 #import "BAUIHelper.h"
-#import "BAQMUIColor.h"
-#import "BADefine.h"
 
-#import "UIView+BAKit.h"
-
-#import "BAAnimation.h"
-
+#import "BAKit.h"
 
 
 

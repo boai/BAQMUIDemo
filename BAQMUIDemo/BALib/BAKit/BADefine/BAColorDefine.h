@@ -57,8 +57,8 @@
  
  */
 
-#ifndef BAQMUIColor_h
-#define BAQMUIColor_h
+#ifndef BAColorDefine_h
+#define BAColorDefine_h
 
 #define UIColorGray1 UIColorMake(53, 60, 70)
 #define UIColorGray2 UIColorMake(73, 80, 90)
@@ -71,4 +71,4 @@
 #define UIColorGray9 UIColorMake(216, 220, 228)
 
 
-#endif /* BAQMUIColor_h */
+#endif /* BAColorDefine_h */
