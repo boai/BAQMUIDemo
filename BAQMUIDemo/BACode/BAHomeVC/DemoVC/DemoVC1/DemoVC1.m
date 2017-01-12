@@ -131,16 +131,6 @@
                                @"2017-01-10 18:09:01",
                                @"2017-01-12 11:18:01"];
         
-//        for (NSInteger i = 0; i < timeArray.count; i ++)
-//        {
-//            DemoVC1_model *model = [[DemoVC1_model alloc] init];
-//            model.userImageUrl = iconImageNamesArray[i];
-//            model.userName = namesArray[i];
-//            model.content = textArray[i];
-//            model.time = timeArray[i];
-//            
-//            [self.dataArray addObject:model];
-//        }
         for (NSInteger i = 0; i < 100; i ++)
         {
             DemoVC1_model *model = [[DemoVC1_model alloc] init];
