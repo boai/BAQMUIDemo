@@ -42,7 +42,7 @@
     
     /*! 自定义启动动画 */
 //    [self ba_setupLaunch];
-    [self ba_launchAnimationWithType:BALaunchAnimationTypeCool];
+    [self ba_launchAnimationWithType:ba_randomNumber(4)];
 }
 
 - (void)ba_creatTabbarController

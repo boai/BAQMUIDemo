@@ -47,13 +47,6 @@
 {
     self.tableView.hidden = NO;
     [self creatDatas];
-    
-    [self test];
-}
-
-- (void)test
-{
-
 }
 
 - (void)creatDatas
