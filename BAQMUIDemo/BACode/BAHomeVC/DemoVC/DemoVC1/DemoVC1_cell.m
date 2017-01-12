@@ -68,8 +68,11 @@ static CGFloat const kContentMargin_bottom   = 6;
     self.nameLabel.text              = model.userName;
     self.userImageView.image         = [UIImage ba_imageToRoundImageWithImage:UIImageMake(model.userImageUrl)];
     self.contentLabel.attributedText = [self ba_attributedStringWithText:model.content lineHeight:25];
-    self.timeLabel.text              = model.time;
-//    self.timeLabel.text            = @"去年 16：55";
+    
+    NSDateFormatter *formatter       = [NSDateFormatter ba_defaultDateFormatter];
+    
+    NSDate *date                     = [formatter dateFromString:model.time];
+    self.timeLabel.text              = [date ba_dateFormattedDateDescription];
 
     /*! 在一个段落的最后一行自然对齐 */
     self.contentLabel.textAlignment  = NSTextAlignmentJustified;

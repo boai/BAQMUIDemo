@@ -24,6 +24,9 @@
 		C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E3D1E1F9661002FDD68 /* BABaseTableViewController.m */; };
 		C44A6E411E1F9896002FDD68 /* BAUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E401E1F9896002FDD68 /* BAUIHelper.m */; };
 		C47161841E275DA10065E494 /* UIImage+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = C47161831E275DA10065E494 /* UIImage+Render.m */; };
+		C471618D1E2765130065E494 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C471618C1E2765130065E494 /* NSString+Time.m */; };
+		C47161921E276AD90065E494 /* NSDate+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C47161911E276AD90065E494 /* NSDate+BAKit.m */; };
+		C47161951E276B030065E494 /* NSDateFormatter+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C47161941E276B030065E494 /* NSDateFormatter+BAKit.m */; };
 		C47DA9861E247BDA001E0FB7 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C47DA9571E247BDA001E0FB7 /* 0.jpg */; };
 		C47DA9871E247BDA001E0FB7 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C47DA9581E247BDA001E0FB7 /* 1.jpg */; };
 		C47DA9881E247BDA001E0FB7 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C47DA9591E247BDA001E0FB7 /* 10.jpg */; };
@@ -145,6 +148,12 @@
 		C44A6E401E1F9896002FDD68 /* BAUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAUIHelper.m; sourceTree = "<group>"; };
 		C47161821E275DA10065E494 /* UIImage+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Render.h"; sourceTree = "<group>"; };
 		C47161831E275DA10065E494 /* UIImage+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Render.m"; sourceTree = "<group>"; };
+		C471618B1E2765130065E494 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
+		C471618C1E2765130065E494 /* NSString+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Time.m"; sourceTree = "<group>"; };
+		C471618F1E276A800065E494 /* NSDate+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BAKit.h"; sourceTree = "<group>"; };
+		C47161911E276AD90065E494 /* NSDate+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BAKit.m"; sourceTree = "<group>"; };
+		C47161931E276B030065E494 /* NSDateFormatter+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+BAKit.h"; sourceTree = "<group>"; };
+		C47161941E276B030065E494 /* NSDateFormatter+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+BAKit.m"; sourceTree = "<group>"; };
 		C47DA9571E247BDA001E0FB7 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		C47DA9581E247BDA001E0FB7 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		C47DA9591E247BDA001E0FB7 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
@@ -340,6 +349,12 @@
 			isa = PBXGroup;
 			children = (
 				C406A9A91E2752CB00F7F432 /* BAFoundation.h */,
+				C471618F1E276A800065E494 /* NSDate+BAKit.h */,
+				C47161911E276AD90065E494 /* NSDate+BAKit.m */,
+				C47161931E276B030065E494 /* NSDateFormatter+BAKit.h */,
+				C47161941E276B030065E494 /* NSDateFormatter+BAKit.m */,
+				C471618B1E2765130065E494 /* NSString+Time.h */,
+				C471618C1E2765130065E494 /* NSString+Time.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -918,10 +933,12 @@
 				C406A9A11E2751F800F7F432 /* UIView+BATransition.m in Sources */,
 				C4909A7E1E25FCAE009D533F /* ProVC.m in Sources */,
 				C406A99E1E2751F800F7F432 /* BAActivityIndicatorView.m in Sources */,
+				C47161921E276AD90065E494 /* NSDate+BAKit.m in Sources */,
 				C4909A701E25FCAE009D533F /* CoreLaunchCool.m in Sources */,
 				C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */,
 				C47DA9C91E24C444001E0FB7 /* BABaseListViewController.m in Sources */,
 				C4909A461E25DF7B009D533F /* AppDelegate+BALaunch.m in Sources */,
+				C47161951E276B030065E494 /* NSDateFormatter+BAKit.m in Sources */,
 				C406A99F1E2751F800F7F432 /* BALoadingView.m in Sources */,
 				C4909A6F1E25FCAE009D533F /* CALayer+Cool.m in Sources */,
 				C406A9A51E27522300F7F432 /* UIView+BAKit.m in Sources */,
@@ -939,6 +956,7 @@
 				C4909A761E25FCAE009D533F /* CoreLaunchPlus.m in Sources */,
 				C44A6E311E1F93F8002FDD68 /* BATabBarViewController.m in Sources */,
 				C406A9A01E2751F800F7F432 /* BALoadingWaveView.m in Sources */,
+				C471618D1E2765130065E494 /* NSString+Time.m in Sources */,
 				C47DA9BE1E24C2DE001E0FB7 /* DemoVC1.m in Sources */,
 				C44A6E381E1F9567002FDD68 /* BABaseViewController.m in Sources */,
 				C4909A751E25FCAE009D533F /* CoreLaunchLite.m in Sources */,

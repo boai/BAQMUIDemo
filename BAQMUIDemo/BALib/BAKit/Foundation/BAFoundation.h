@@ -60,5 +60,9 @@
 #ifndef BAFoundation_h
 #define BAFoundation_h
 
+#import "NSDate+BAKit.h"
+#import "NSDateFormatter+BAKit.h"
+#import "NSString+Time.h"
+
 
 #endif /* BAFoundation_h */

@@ -125,8 +125,22 @@
                                @"AirPods 的所有创举均得益于 Apple 特别设计的 W1 芯片。它带来十分高效的无线性能，从而提供更佳的连接和更好的音质。W1 芯片对电池续航时间的管理十分出色，一次充电即可让你尽情聆听 5 小时3。如此高性能，集成在如此小巧的设备中，闻所未闻。",
                                @"AirPods 一次充电可聆听 5 小时3，表现出众。再加上充电盒能存储多次额外充电的电量，满足超过 24 小时的续航， AirPods 更能与你时刻相伴4。需要快速充电？只需放入充电盒中 15 分钟即可获得最长可达 3 小时的聆听时间5。要查看电池电量，只需将 AirPods 靠近你的 iPhone，或者问问 Siri 你的 AirPods 还剩多少电量。"
                                ];
-        NSArray *timeArray = @[@"2016-03-06",@"2016-03-07",@"2016-03-08",@"2016-03-09",@"2016-03-10"];
+        NSArray *timeArray = @[@"2017-01-06 16:08:01",
+                               @"2017-01-11 19:25:01",
+                               @"2017-01-12 16:30:01",
+                               @"2017-01-10 18:09:01",
+                               @"2017-01-12 11:18:01"];
         
+//        for (NSInteger i = 0; i < timeArray.count; i ++)
+//        {
+//            DemoVC1_model *model = [[DemoVC1_model alloc] init];
+//            model.userImageUrl = iconImageNamesArray[i];
+//            model.userName = namesArray[i];
+//            model.content = textArray[i];
+//            model.time = timeArray[i];
+//            
+//            [self.dataArray addObject:model];
+//        }
         for (NSInteger i = 0; i < 100; i ++)
         {
             DemoVC1_model *model = [[DemoVC1_model alloc] init];
