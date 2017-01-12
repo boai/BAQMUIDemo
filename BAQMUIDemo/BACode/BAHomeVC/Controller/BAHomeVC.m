@@ -48,6 +48,12 @@
     self.tableView.hidden = NO;
     [self creatDatas];
     
+    [self test];
+}
+
+- (void)test
+{
+
 }
 
 - (void)creatDatas
@@ -105,8 +111,9 @@
     {
         UIViewController *vc = class.new;
         vc.title = self.titlesArray[indexPath.row];
+        
         /*! 转场动画 */
-        [self ba_animationWithBATransitionType:BATransitionTypeRippleEffect animationView:self.navigationController.view];
+        [self ba_animationWithBATransitionType:ba_randomNumber(12) animationView:self.navigationController.view];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

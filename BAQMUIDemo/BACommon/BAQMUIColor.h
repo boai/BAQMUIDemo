@@ -20,7 +20,4 @@
 #define UIColorGray9 UIColorMake(216, 220, 228)
 
 
-
-
-
 #endif /* BAQMUIColor_h */
