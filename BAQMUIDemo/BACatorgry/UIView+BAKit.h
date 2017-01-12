@@ -51,8 +51,7 @@
  * 微博    : 博爱1616
  * Email  : 137361770@qq.com
  * GitHub : https://github.com/boai
- * 博客园  : http://www.cnblogs.com/boai/
- * 博客    : http://boai.github.io
+ * 博客    : http://boaihom.com
  
  *********************************************************************************
  
