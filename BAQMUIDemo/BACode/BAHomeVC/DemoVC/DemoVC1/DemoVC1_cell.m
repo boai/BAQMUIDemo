@@ -66,7 +66,7 @@ static CGFloat const kContentMargin_bottom   = 6;
     _model = model;
     
     self.nameLabel.text              = model.userName;
-    self.userImageView.image         = UIImageMake(model.userImageUrl);
+    self.userImageView.image         = [UIImage ba_imageToRoundImageWithImage:UIImageMake(model.userImageUrl)];
     self.contentLabel.attributedText = [self ba_attributedStringWithText:model.content lineHeight:25];
     self.timeLabel.text              = model.time;
 //    self.timeLabel.text            = @"去年 16：55";
@@ -133,9 +133,9 @@ static CGFloat const kContentMargin_bottom   = 6;
     
 //    self.userImageView.frame = CGRectSetXY(self.userImageView.frame, kInsets.left, kInsets.top);
 //    self.userImageView.frame = CGRectMake(kInsets.left, kInsets.top, kUserImageSize, kUserImageSize);
-    self.userImageView.layer.cornerRadius = self.userImageView.width/2;
-    self.userImageView.layer.masksToBounds = YES;
-    
+//    self.userImageView.layer.cornerRadius = self.userImageView.width/2;
+//    self.userImageView.layer.masksToBounds = YES;
+//    
     if (self.nameLabel.text.length > 0)
     {
         CGFloat name_With = content_With - self.userImageView.width - kUserImageMargin_right;

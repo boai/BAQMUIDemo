@@ -117,7 +117,7 @@
                                 @"小明",
                                 @"陆晓峰",
                                 @"石少庸是小明的老师",
-                                @"小三"];
+                                @"石少庸"];
         
         NSArray *textArray = @[@"耳机只要一取出，就可与你的各种设备配合使用。将它们戴入耳中，瞬间便完成连接。对它们讲话时，你的声音格外清晰。全新 AirPods，令简约与技术的融合更胜以往，带来妙处连连。",
                                @"简单轻点一下即可完成设置，然后 AirPods 便自动开启并始终保持连接1。使用也同样轻轻松松，一戴入耳中它们即可感知，一取出就会暂停播放。无论是聆听你的 iPhone、Apple Watch、iPad，还是 Mac 上的内容，使用 AirPods 的体验都同样精彩。",
@@ -126,19 +126,14 @@
                                @"AirPods 一次充电可聆听 5 小时3，表现出众。再加上充电盒能存储多次额外充电的电量，满足超过 24 小时的续航， AirPods 更能与你时刻相伴4。需要快速充电？只需放入充电盒中 15 分钟即可获得最长可达 3 小时的聆听时间5。要查看电池电量，只需将 AirPods 靠近你的 iPhone，或者问问 Siri 你的 AirPods 还剩多少电量。"
                                ];
         NSArray *timeArray = @[@"2016-03-06",@"2016-03-07",@"2016-03-08",@"2016-03-09",@"2016-03-10"];
-
-        for (NSInteger i = 0; i < 200; i ++)
+        
+        for (NSInteger i = 0; i < 100; i ++)
         {
-            int iconRandomIndex = arc4random_uniform(5);
-            int nameRandomIndex = arc4random_uniform(5);
-            int contentRandomIndex = arc4random_uniform(5);
-            int timeRandomIndex = arc4random_uniform(5);
-            
             DemoVC1_model *model = [[DemoVC1_model alloc] init];
-            model.userImageUrl = iconImageNamesArray[iconRandomIndex];
-            model.userName = namesArray[nameRandomIndex];
-            model.content = textArray[contentRandomIndex];
-            model.time = timeArray[timeRandomIndex];
+            model.userImageUrl = iconImageNamesArray[ba_randomNumber(5)];
+            model.userName = namesArray[ba_randomNumber(5)];
+            model.content = textArray[ba_randomNumber(5)];
+            model.time = timeArray[ba_randomNumber(5)];
             
             [self.dataArray addObject:model];
         }

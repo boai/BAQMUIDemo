@@ -23,6 +23,7 @@
 		C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E3A1E1F9626002FDD68 /* BANavigationController.m */; };
 		C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E3D1E1F9661002FDD68 /* BABaseTableViewController.m */; };
 		C44A6E411E1F9896002FDD68 /* BAUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E401E1F9896002FDD68 /* BAUIHelper.m */; };
+		C47161841E275DA10065E494 /* UIImage+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = C47161831E275DA10065E494 /* UIImage+Render.m */; };
 		C47DA9861E247BDA001E0FB7 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C47DA9571E247BDA001E0FB7 /* 0.jpg */; };
 		C47DA9871E247BDA001E0FB7 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C47DA9581E247BDA001E0FB7 /* 1.jpg */; };
 		C47DA9881E247BDA001E0FB7 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C47DA9591E247BDA001E0FB7 /* 10.jpg */; };
@@ -142,6 +143,8 @@
 		C44A6E3D1E1F9661002FDD68 /* BABaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BABaseTableViewController.m; sourceTree = "<group>"; };
 		C44A6E3F1E1F9896002FDD68 /* BAUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAUIHelper.h; sourceTree = "<group>"; };
 		C44A6E401E1F9896002FDD68 /* BAUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAUIHelper.m; sourceTree = "<group>"; };
+		C47161821E275DA10065E494 /* UIImage+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Render.h"; sourceTree = "<group>"; };
+		C47161831E275DA10065E494 /* UIImage+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Render.m"; sourceTree = "<group>"; };
 		C47DA9571E247BDA001E0FB7 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		C47DA9581E247BDA001E0FB7 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		C47DA9591E247BDA001E0FB7 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				C406A9A81E2752B700F7F432 /* BAUIKit.h */,
 				C406A9A31E27522300F7F432 /* UIView+BAKit.h */,
 				C406A9A41E27522300F7F432 /* UIView+BAKit.m */,
+				C47161821E275DA10065E494 /* UIImage+Render.h */,
+				C47161831E275DA10065E494 /* UIImage+Render.m */,
 				C406A9AD1E2753CF00F7F432 /* UIImageEffects.h */,
 				C406A9AE1E2753CF00F7F432 /* UIImageEffects.m */,
 			);
@@ -900,6 +905,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44A6E3E1E1F9661002FDD68 /* BABaseTableViewController.m in Sources */,
+				C47161841E275DA10065E494 /* UIImage+Render.m in Sources */,
 				C4909A431E25D5B7009D533F /* AppDelegate+BAQMUI.m in Sources */,
 				C4D472231E1F472400438D98 /* AppDelegate.m in Sources */,
 				C406A9A21E2751F800F7F432 /* UIView+BAAnimation.m in Sources */,
