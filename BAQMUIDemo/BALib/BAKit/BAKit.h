@@ -61,10 +61,10 @@
 #define BAKit_h
 
 
-#import "BAUIkit.h"
-#import "BAFoundation.h"
-#import "BACustom.h"
-#import "BADefine.h"
+#import "BAKit_UIkit.h"
+#import "BAKit_Foundation.h"
+#import "BAKit_Custom.h"
+#import "BAKit_Define.h"
 
 
 #endif /* BAKit_h */

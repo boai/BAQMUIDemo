@@ -16,4 +16,6 @@ target 'BAQMUIDemo' do
   # Pods for BAQMUIDemo
     pod 'QMUIKit'
     pod 'XHLaunchAd'
+    pod 'AFNetworking'
+    
 end
