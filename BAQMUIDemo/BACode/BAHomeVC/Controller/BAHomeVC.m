@@ -63,8 +63,9 @@
             NSLog(@"dat2:  %@", data.videoSidList);
             NSLog(@"dat3:  %@", data.videoList);
             
-            NSLog(@"dat4:  %@", data.videoList[0].title);
-            NSLog(@"dat5:  %@", data.videoList[0].mp4Hd_url);
+            Videolist *list0 = data.videoList[0];
+            NSLog(@"dat4:  %@", list0.title);
+            NSLog(@"dat5:  %@", list0.mp4_url);
 
         }
         

@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BAQMUIDemo/BACode/BAHomeVC/Controller/BAHomeVC.m"
-            timestampString = "505989894.066595"
+            timestampString = "505995133.820591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-test"
             landmarkType = "5">
          </BreakpointContent>
