@@ -9,5 +9,8 @@
 #import "BABaseNet.h"
 
 @interface BALaunchADNet : BABaseNet
+BAKit_SingletonH(BALaunchADNetShare)
+
+- (void)ba_launchADNet_getImageDataCompletionHandle:(void (^)(id data, NSError *))completionHandle;
 
 @end

@@ -291,6 +291,7 @@
 		C4D4722A1E1F472400438D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D4722D1E1F472400438D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D4722F1E1F472400438D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F8BF4A1E28723200FDE6C8 /* BAKit_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_Singleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -573,9 +574,10 @@
 		C46C75BB1E28681800C3093E /* BAKit_Define */ = {
 			isa = PBXGroup;
 			children = (
+				C46C75BE1E28681800C3093E /* BAKit_Define.h */,
 				C46C75BC1E28681800C3093E /* BAKit_ColorDefine.h */,
 				C46C75BD1E28681800C3093E /* BAKit_CommonDefine.h */,
-				C46C75BE1E28681800C3093E /* BAKit_Define.h */,
+				C4F8BF4A1E28723200FDE6C8 /* BAKit_Singleton.h */,
 			);
 			path = BAKit_Define;
 			sourceTree = "<group>";
