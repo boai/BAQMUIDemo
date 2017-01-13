@@ -7,7 +7,8 @@
 //
 
 #import "BAHomeVC.h"
-
+#import "BALaunchADNet.h"
+#import "YYModel.h"
 
 @interface BAHomeVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -48,7 +49,29 @@
     self.tableView.hidden = NO;
     
     [self creatDatas];
+    
+    [self test];
 }
+
+- (void)test
+{
+    [[BALaunchADNet sharedBALaunchADNet] ba_getVideosWithStartIndex:1 completionHandle:^(BAVideoModel *data, NSError *error) {
+        
+        if (data)
+        {
+            NSLog(@"dat1:  %@", data.videoHomeSid);
+            NSLog(@"dat2:  %@", data.videoSidList);
+            NSLog(@"dat3:  %@", data.videoList);
+            
+            NSLog(@"dat4:  %@", data.videoList[0].title);
+            NSLog(@"dat5:  %@", data.videoList[0].mp4Hd_url);
+
+        }
+        
+    }];
+    
+}
+
 
 - (void)creatDatas
 {

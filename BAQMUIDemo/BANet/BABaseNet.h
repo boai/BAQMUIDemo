@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BANetManager.h"
+#import "BAURLsPath.h"
 
 @interface BABaseNet : NSObject
 

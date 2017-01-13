@@ -10,6 +10,7 @@
 #define BAURLsPath_h
 
 
+#define KVideoPath @"http://c.m.163.com/nc/video/home/%ld-10.html"
 
 
 #endif /* BAURLsPath_h */

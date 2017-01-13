@@ -7,10 +7,15 @@
 //
 
 #import "BABaseNet.h"
+#import "BAVideoModel.h"
 
 @interface BALaunchADNet : BABaseNet
-BAKit_SingletonH(BALaunchADNetShare)
+BAKit_SingletonH(BALaunchADNet)
 
 - (void)ba_launchADNet_getImageDataCompletionHandle:(void (^)(id data, NSError *))completionHandle;
+
+- (void)ba_launchADNet_getVideoDataCompletionHandle:(void (^)(id data, NSError *))completionHandle;
+
+- (id)ba_getVideosWithStartIndex:(NSInteger)startIndex completionHandle:(void (^)(BAVideoModel *data, NSError *))completionHandle;
 
 @end

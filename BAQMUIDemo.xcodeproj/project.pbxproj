@@ -18,6 +18,7 @@
 		C4033AEA1E2862A900E3CBE8 /* LaunchVideoAd.json in Resources */ = {isa = PBXBuildFile; fileRef = C4033ADF1E2862A900E3CBE8 /* LaunchVideoAd.json */; };
 		C4033AEB1E2862A900E3CBE8 /* video0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4033AE01E2862A900E3CBE8 /* video0.mp4 */; };
 		C4033AEC1E2862A900E3CBE8 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4033AE11E2862A900E3CBE8 /* video1.mp4 */; };
+		C435352D1E28AEB000BCF329 /* BAVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C435352C1E28AEB000BCF329 /* BAVideoModel.m */; };
 		C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E261E1F939D002FDD68 /* BAHomeVC.m */; };
 		C44A6E291E1F939D002FDD68 /* BAHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44A6E271E1F939D002FDD68 /* BAHomeVC.xib */; };
 		C44A6E2D1E1F93AD002FDD68 /* BAMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A6E2B1E1F93AD002FDD68 /* BAMeVC.m */; };
@@ -117,6 +118,7 @@
 		C4D472231E1F472400438D98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D472221E1F472400438D98 /* AppDelegate.m */; };
 		C4D4722B1E1F472400438D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722A1E1F472400438D98 /* Assets.xcassets */; };
 		C4D4722E1E1F472400438D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D4722C1E1F472400438D98 /* LaunchScreen.storyboard */; };
+		C4FE38E01E28837C0049CDD0 /* BALaunchADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE38DF1E28837C0049CDD0 /* BALaunchADModel.m */; };
 		EC8AAABE7AF79A925E2663B4 /* libPods-BAQMUIDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C07FA7485D4F66D719D615E4 /* libPods-BAQMUIDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +137,8 @@
 		C4033ADF1E2862A900E3CBE8 /* LaunchVideoAd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LaunchVideoAd.json; sourceTree = "<group>"; };
 		C4033AE01E2862A900E3CBE8 /* video0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video0.mp4; sourceTree = "<group>"; };
 		C4033AE11E2862A900E3CBE8 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		C435352B1E28AEB000BCF329 /* BAVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAVideoModel.h; sourceTree = "<group>"; };
+		C435352C1E28AEB000BCF329 /* BAVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAVideoModel.m; sourceTree = "<group>"; };
 		C44A6E1C1E1F919B002FDD68 /* BAQMUI.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAQMUI.pch; sourceTree = "<group>"; };
 		C44A6E251E1F939D002FDD68 /* BAHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAHomeVC.h; sourceTree = "<group>"; };
 		C44A6E261E1F939D002FDD68 /* BAHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAHomeVC.m; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 		C4D4722D1E1F472400438D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D4722F1E1F472400438D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4F8BF4A1E28723200FDE6C8 /* BAKit_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_Singleton.h; sourceTree = "<group>"; };
+		C4FE38DE1E28837C0049CDD0 /* BALaunchADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALaunchADModel.h; sourceTree = "<group>"; };
+		C4FE38DF1E28837C0049CDD0 /* BALaunchADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALaunchADModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,6 +497,7 @@
 				C46C75A11E28647A00C3093E /* BAURLsPath.h */,
 				C46C759E1E28646800C3093E /* BALaunchADNet.h */,
 				C46C759F1E28646800C3093E /* BALaunchADNet.m */,
+				C4FE38DD1E2883570049CDD0 /* BANetModel */,
 			);
 			path = BANet;
 			sourceTree = "<group>";
@@ -835,6 +842,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C4FE38DD1E2883570049CDD0 /* BANetModel */ = {
+			isa = PBXGroup;
+			children = (
+				C435352B1E28AEB000BCF329 /* BAVideoModel.h */,
+				C435352C1E28AEB000BCF329 /* BAVideoModel.m */,
+				C4FE38DE1E28837C0049CDD0 /* BALaunchADModel.h */,
+				C4FE38DF1E28837C0049CDD0 /* BALaunchADModel.m */,
+			);
+			path = BANetModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1024,6 +1042,7 @@
 				C46C75D21E28681800C3093E /* UIView+BATransition.m in Sources */,
 				C4909A431E25D5B7009D533F /* AppDelegate+BAQMUI.m in Sources */,
 				C4D472231E1F472400438D98 /* AppDelegate.m in Sources */,
+				C435352D1E28AEB000BCF329 /* BAVideoModel.m in Sources */,
 				C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */,
 				C4909A771E25FCAE009D533F /* CoreLaunchPro.m in Sources */,
 				C46C75DC1E28681800C3093E /* UIView+BAKit.m in Sources */,
@@ -1034,6 +1053,7 @@
 				C46C75D11E28681800C3093E /* BAKit_LoadingWaveView.m in Sources */,
 				C4909A7D1E25FCAE009D533F /* UIViewController+PortalTransition.m in Sources */,
 				C4909A7E1E25FCAE009D533F /* ProVC.m in Sources */,
+				C4FE38E01E28837C0049CDD0 /* BALaunchADModel.m in Sources */,
 				C46C759D1E28643200C3093E /* BABaseNet.m in Sources */,
 				C4909A701E25FCAE009D533F /* CoreLaunchCool.m in Sources */,
 				C47DA9CC1E24D5E4001E0FB7 /* BACustomToastAnimator.m in Sources */,
