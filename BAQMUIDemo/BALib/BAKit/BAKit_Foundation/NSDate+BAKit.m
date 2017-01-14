@@ -231,11 +231,11 @@
     NSString *theDay = [dateFormatter stringFromDate:self];//日期的年月日
     NSString *currentDay = [dateFormatter stringFromDate:[NSDate date]];//当前年月日
     
-    NSLog(@"当前时间3： %@", self);
+//    NSLog(@"当前时间3： %@", self);
 
     NSInteger timeInterval = -[self timeIntervalSinceNow];
     
-    NSLog(@"当前时间4： %ld", (long)timeInterval);
+//    NSLog(@"当前时间4： %ld", (long)timeInterval);
 
     if (timeInterval < 60) {
         return @"刚刚";
