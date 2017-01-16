@@ -76,8 +76,9 @@
 
 - (void)creatDatas
 {
-    [self addCell:@"1、QMUITableView 用法" content:@"QMUITableView " class:@"DemoVC1"];
-    [self addCell:@"2、QMUITips 用法" content:@"QMUITips " class:@"DemoVC2"];
+    [self addCell:@"1、QMUITableView 用法" content:@"1、QMUITableView  用法" class:@"DemoVC1"];
+    [self addCell:@"2、QMUITips 用法" content:@"2、QMUITips  用法" class:@"DemoVC2"];
+    [self addCell:@"3、QMUITableViewVC 用法" content:@"3、QMUITableViewVC  用法" class:@"DemoVC3"];
 
 }
 
@@ -107,7 +108,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = self.titlesArray[indexPath.row];
+    cell.textLabel.text = self.contentsArray[indexPath.row];
     cell.textLabel.font = UIFontMake(15);
     [cell updateCellAppearanceWithIndexPath:indexPath];
     
