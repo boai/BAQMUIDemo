@@ -204,8 +204,15 @@ static NSString * const cellID = @"DemoVC3Cell";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    
-    
+    NSUInteger section = indexPath.section;
+    NSUInteger row = indexPath.row;
+//    if (section == 0)
+//    {
+//        NSLog(@"");
+//    }
+    DemoVC3_model *model = self.sectionArray[section][row];
+
+    NSLog(@"你点击了：%@", model.userName);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
