@@ -14,6 +14,8 @@ static NSString * const cellID = @"DemoVC3Cell";
 #define cellHeight        50
 #define cellImageViewSize cellHeight * 0.8
 
+#define tableViewEdgeInsets UIEdgeInsetsMake(0, 15, 0, 0)
+
 @interface DemoVC3 ()<QMUISearchControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray <DemoVC3_model *>*dataArray;
@@ -35,10 +37,11 @@ static NSString * const cellID = @"DemoVC3Cell";
 - (void)setupUI
 {
 //    self.tableView.backgroundColor = UIColorWhite;
-    self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
+    self.tableView.separatorInset = tableViewEdgeInsets;
     
     self.mySearchController = [[QMUISearchController alloc] initWithContentsViewController:self];
     self.mySearchController.searchResultsDelegate = self;
+    self.mySearchController.tableView.separatorInset = tableViewEdgeInsets;
     self.tableView.tableHeaderView = self.mySearchController.searchBar;
 
 }
@@ -198,12 +201,20 @@ static NSString * const cellID = @"DemoVC3Cell";
                                 @"陆晓峰",
                                 @"石少庸是小明的老师",
                                 @"石少庸"];
-        for (NSInteger i = 0; i < 50; i ++)
+//        for (NSInteger i = 0; i < 50; i ++)
+//        {
+//            DemoVC3_model *model = [[DemoVC3_model alloc] init];
+//            model.userImageUrl = iconImageNamesArray[ba_randomNumber(6)];
+//            model.userName = namesArray[ba_randomNumber(6)];
+//
+//            [self.dataArray addObject:model];
+//        }
+        for (NSInteger i = 0; i < 6; i ++)
         {
             DemoVC3_model *model = [[DemoVC3_model alloc] init];
-            model.userImageUrl = iconImageNamesArray[ba_randomNumber(6)];
-            model.userName = namesArray[ba_randomNumber(6)];
-
+            model.userImageUrl = iconImageNamesArray[i];
+            model.userName = namesArray[i];
+            
             [self.dataArray addObject:model];
         }
 	}
