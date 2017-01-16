@@ -90,4 +90,17 @@
                      borderColor:(UIColor *)color
                            image:(UIImage *)image;
 
+/*!
+ *  传入图片，cell，imageSize，改变自定义大小的系统 cell image
+ *
+ *  @param cell      cell
+ *  @param image     image 可以自己切圆角：[UIImage ba_imageToRoundImageWithImage:UIImageMake(@"icon1.jpg")]；
+ *  @param imageSize 图像的 size 记得先切圆角再传 size
+ *
+ *  @return 返回自定义大小的系统 cell image
+ */
++ (UIImage *)ba_imageToChangeCellNormalImageViewSizeWithCell:(UITableViewCell *)cell
+                                                       image:(UIImage *)image
+                                                   imageSize:(CGSize)imageSize;
+
 @end
