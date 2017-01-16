@@ -18,5 +18,5 @@ target 'BAQMUIDemo' do
     pod 'XHLaunchAd'
     pod 'AFNetworking'
     pod 'YYModel'
-    
+
 end
