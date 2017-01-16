@@ -62,7 +62,11 @@
 
 #import "NSDate+BAKit.h"
 #import "NSDateFormatter+BAKit.h"
+
 #import "NSString+Time.h"
+#import "NSMutableAttributedString+BAKit.h"
+
+#import "NSObject+BARunTime.h"
 
 
 #endif /* BAKit_Foundation_h */

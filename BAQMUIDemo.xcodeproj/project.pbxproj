@@ -122,6 +122,9 @@
 		C4ED92151E2C62DE00D067E3 /* DemoVC3_model.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED92141E2C62DE00D067E3 /* DemoVC3_model.m */; };
 		C4F379531E2CA975002EB335 /* BAKit_ChineseString.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F379501E2CA975002EB335 /* BAKit_ChineseString.m */; };
 		C4F379541E2CA975002EB335 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = C4F379511E2CA975002EB335 /* pinyin.c */; };
+		C4F379571E2CC1C9002EB335 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F379561E2CC1C9002EB335 /* UIAlertController+Blocks.m */; };
+		C4F3795A1E2CC2A4002EB335 /* NSObject+BARunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F379591E2CC2A4002EB335 /* NSObject+BARunTime.m */; };
+		C4F3795D1E2CC426002EB335 /* NSMutableAttributedString+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F3795C1E2CC426002EB335 /* NSMutableAttributedString+BAKit.m */; };
 		C4FE38E01E28837C0049CDD0 /* BALaunchADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE38DF1E28837C0049CDD0 /* BALaunchADModel.m */; };
 		EC8AAABE7AF79A925E2663B4 /* libPods-BAQMUIDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C07FA7485D4F66D719D615E4 /* libPods-BAQMUIDemo.a */; };
 /* End PBXBuildFile section */
@@ -307,6 +310,12 @@
 		C4F379501E2CA975002EB335 /* BAKit_ChineseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAKit_ChineseString.m; sourceTree = "<group>"; };
 		C4F379511E2CA975002EB335 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
 		C4F379521E2CA975002EB335 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		C4F379551E2CC1C9002EB335 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
+		C4F379561E2CC1C9002EB335 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
+		C4F379581E2CC2A4002EB335 /* NSObject+BARunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BARunTime.h"; sourceTree = "<group>"; };
+		C4F379591E2CC2A4002EB335 /* NSObject+BARunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BARunTime.m"; sourceTree = "<group>"; };
+		C4F3795B1E2CC426002EB335 /* NSMutableAttributedString+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+BAKit.h"; sourceTree = "<group>"; };
+		C4F3795C1E2CC426002EB335 /* NSMutableAttributedString+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+BAKit.m"; sourceTree = "<group>"; };
 		C4F8BF4A1E28723200FDE6C8 /* BAKit_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_Singleton.h; sourceTree = "<group>"; };
 		C4FE38DE1E28837C0049CDD0 /* BALaunchADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALaunchADModel.h; sourceTree = "<group>"; };
 		C4FE38DF1E28837C0049CDD0 /* BALaunchADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALaunchADModel.m; sourceTree = "<group>"; };
@@ -612,6 +621,10 @@
 				C46C75C41E28681800C3093E /* NSDateFormatter+BAKit.m */,
 				C46C75C51E28681800C3093E /* NSString+Time.h */,
 				C46C75C61E28681800C3093E /* NSString+Time.m */,
+				C4F3795B1E2CC426002EB335 /* NSMutableAttributedString+BAKit.h */,
+				C4F3795C1E2CC426002EB335 /* NSMutableAttributedString+BAKit.m */,
+				C4F379581E2CC2A4002EB335 /* NSObject+BARunTime.h */,
+				C4F379591E2CC2A4002EB335 /* NSObject+BARunTime.m */,
 			);
 			path = BAKit_Foundation;
 			sourceTree = "<group>";
@@ -626,6 +639,8 @@
 				C46C75CC1E28681800C3093E /* UIImageEffects.m */,
 				C46C75CD1E28681800C3093E /* UIView+BAKit.h */,
 				C46C75CE1E28681800C3093E /* UIView+BAKit.m */,
+				C4F379551E2CC1C9002EB335 /* UIAlertController+Blocks.h */,
+				C4F379561E2CC1C9002EB335 /* UIAlertController+Blocks.m */,
 			);
 			path = BAKit_UIKit;
 			sourceTree = "<group>";
@@ -1083,6 +1098,7 @@
 				C47DA9D41E24E099001E0FB7 /* BACustomToastContentView.m in Sources */,
 				C4909A771E25FCAE009D533F /* CoreLaunchPro.m in Sources */,
 				C46C75DC1E28681800C3093E /* UIView+BAKit.m in Sources */,
+				C4F3795A1E2CC2A4002EB335 /* NSObject+BARunTime.m in Sources */,
 				C44A6E3B1E1F9626002FDD68 /* BANavigationController.m in Sources */,
 				C44A6E281E1F939D002FDD68 /* BAHomeVC.m in Sources */,
 				C47DA9C11E24C2DE001E0FB7 /* DemoVC1_model.m in Sources */,
@@ -1110,6 +1126,8 @@
 				C46C75A01E28646800C3093E /* BALaunchADNet.m in Sources */,
 				C44A6E411E1F9896002FDD68 /* BAUIHelper.m in Sources */,
 				C4909A7A1E25FCAE009D533F /* CYPortalTransitionContext.m in Sources */,
+				C4F3795D1E2CC426002EB335 /* NSMutableAttributedString+BAKit.m in Sources */,
+				C4F379571E2CC1C9002EB335 /* UIAlertController+Blocks.m in Sources */,
 				C46C75901E28633800C3093E /* AppDelegate+BALaunchAD.m in Sources */,
 				C47DA9C01E24C2DE001E0FB7 /* DemoVC1_cell.m in Sources */,
 				C46C75D41E28681800C3093E /* BANetManager.m in Sources */,
@@ -1241,7 +1259,7 @@
 				DEVELOPMENT_TEAM = 5MLEPWQRVD;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/BAQMUI.pch";
 				INFOPLIST_FILE = BAQMUIDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boaihome.BAQMUIDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1256,7 +1274,7 @@
 				DEVELOPMENT_TEAM = 5MLEPWQRVD;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/BAQMUI.pch";
 				INFOPLIST_FILE = BAQMUIDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boaihome.BAQMUIDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

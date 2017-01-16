@@ -206,13 +206,9 @@ static NSString * const cellID = @"DemoVC3Cell";
     
     NSUInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
-//    if (section == 0)
-//    {
-//        NSLog(@"");
-//    }
-    DemoVC3_model *model = self.sectionArray[section][row];
 
-    NSLog(@"你点击了：%@", model.userName);
+    DemoVC3_model *model = self.sectionArray[section][row];
+    [self ba_showAlertWithModel:model];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -279,6 +275,38 @@ static NSString * const cellID = @"DemoVC3Cell";
     {
         [QMUIHelper renderStatusBarStyleDark];
     }
+}
+
+#pragma mark - custom Method
+- (void)ba_showAlertWithModel:(DemoVC3_model *)model
+{
+    NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:@"博爱温馨提示" attributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]}];
+    
+    NSString *message = [NSString stringWithFormat:@"你点击了 %@ ！", model.userName];
+    NSString *keyWord = model.userName;
+    
+    /*! 关键字添加效果 */
+    NSMutableAttributedString *attributedMessage = [[NSMutableAttributedString alloc]initWithString:message];
+    
+    /*! 获取关键字位置 */
+    NSRange range = [message rangeOfString:keyWord];
+    
+    NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:20],NSForegroundColorAttributeName:[UIColor blackColor],NSKernAttributeName:@2.0,NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle),NSStrokeColorAttributeName:[UIColor blueColor],NSStrokeWidthAttributeName:@2.0,NSVerticalGlyphFormAttributeName:@(0)};
+    
+    /*! 设置关键字属性 */
+    [attributedMessage ba_changeAttributeDict:dic range:range];
+    
+    [UIAlertController ba_alertControllerShowAlertInViewController:self withTitle:@"博爱温馨提示" mutableAttributedTitle:attributedTitle message:@"" mutableAttributedMessage:attributedMessage buttonTitlesArray:@[@"取 消", @"确 定"] buttonTitleColorArray:@[UIColorGreen, UIColorRed] tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+            if (buttonIndex == 0)
+            {
+                NSLog(@"你点击了取消按钮！");
+            }
+            else if (buttonIndex == 1)
+            {
+                NSLog(@"你点击了确定按钮！");
+            }
+            return;
+    }];
 }
 
 #pragma mark - setter / getter
