@@ -104,6 +104,25 @@ static NSString * const cellID = @"DemoVC3Cell";
     }];
     [newSectionArray removeObjectsInArray:temp];
 
+    NSMutableArray *tempModel = [NSMutableArray new];
+    NSArray *dicts = @[@{@"name" : @"新的朋友",
+                         @"imageName" : @"plugins_FriendNotify"},
+                       @{@"name" : @"群聊",
+                         @"imageName" : @"add_friend_icon_addgroup"},
+                       @{@"name" : @"标签",
+                         @"imageName" : @"Contact_icon_ContactTag"},
+                       @{@"name" : @"公众号",
+                         @"imageName" : @"add_friend_icon_offical"}];
+    for (NSDictionary *dict in dicts) {
+        DemoVC3_model *model = [DemoVC3_model new];
+        model.userName = dict[@"name"];
+        model.userImageUrl = dict[@"imageName"];
+        [tempModel addObject:model];
+    }
+    
+    [newSectionArray insertObject:tempModel atIndex:0];
+    [self.indexArray insertObject:@"" atIndex:0];
+    
     self.sectionArray = newSectionArray;
 }
 
@@ -159,7 +178,7 @@ static NSString * const cellID = @"DemoVC3Cell";
     }
     else
     {
-        model = self.searchResultsKeywordsArray[indexPath.row];
+        model = self.searchResultsKeywordsArray[row];
 
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:model.userName attributes:@{NSForegroundColorAttributeName:UIColorBlack}];
         
@@ -171,7 +190,7 @@ static NSString * const cellID = @"DemoVC3Cell";
         cell.textLabel.attributedText = attributedString;
     }
     
-    cell.imageView.image = [UIImage ba_imageToChangeCellRoundImageViewSizeWithCell:cell image:UIImageMake(@"icon1.jpg") imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
+    cell.imageView.image = [UIImage ba_imageToChangeCellRoundImageViewSizeWithCell:cell image:UIImageMake(model.userImageUrl) imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
     cell.imageEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
     cell.textLabelEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
     cell.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
@@ -183,6 +202,9 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
     
 }
 
