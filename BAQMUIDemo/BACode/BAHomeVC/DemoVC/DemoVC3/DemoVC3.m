@@ -7,14 +7,20 @@
 //
 
 #import "DemoVC3.h"
-
+#import "DemoVC3_model.h"
 
 static NSString * const cellID = @"DemoVC3Cell";
 
 #define cellHeight        50
 #define cellImageViewSize cellHeight * 0.8
 
-@interface DemoVC3 ()
+@interface DemoVC3 ()<QMUISearchControllerDelegate>
+
+@property (nonatomic, strong) NSMutableArray <DemoVC3_model *>*dataArray;
+
+@property (nonatomic, strong) NSMutableArray <DemoVC3_model *>*searchResultsKeywordsArray;
+
+@property (nonatomic, strong) QMUISearchController *mySearchController;
 
 @end
 
@@ -30,9 +36,23 @@ static NSString * const cellID = @"DemoVC3Cell";
 {
 //    self.tableView.backgroundColor = UIColorWhite;
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
+    
+    self.mySearchController = [[QMUISearchController alloc] initWithContentsViewController:self];
+    self.mySearchController.searchResultsDelegate = self;
+    self.tableView.tableHeaderView = self.mySearchController.searchBar;
+
 }
 
 #pragma mark - QMUITableView Delegate & DataSource
+- (instancetype)initWithStyle:(UITableViewStyle)style
+{
+    if (self = [super initWithStyle:style])
+    {
+        
+    }
+    return self;
+}
+
 
 - (BOOL)shouldShowSearchBarInTableView:(QMUITableView *)tableView
 {
@@ -46,7 +66,11 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    if (tableView == self.tableView)
+    {
+        return self.dataArray.count;
+    }
+    return self.searchResultsKeywordsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,11 +80,37 @@ static NSString * const cellID = @"DemoVC3Cell";
     if (!cell)
     {
         cell = [[QMUITableViewCell alloc] initForTableView:self.tableView withStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.textLabel.text = @"boai";
-    UIImage *img = [UIImage ba_imageToRoundImageWithImage:UIImageMake(@"icon1.jpg")];
-    cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
+    
+    if (tableView == self.tableView)
+    {
+        DemoVC3_model *model = self.dataArray[indexPath.row];
+
+        cell.textLabel.text = model.userName;
+        UIImage *img = [UIImage ba_imageToRoundImageWithImage:UIImageMake(model.userImageUrl)];
+        cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
+        
+    }
+    else
+    {
+        DemoVC3_model *model = self.searchResultsKeywordsArray[indexPath.row];
+
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:model.userName attributes:@{NSForegroundColorAttributeName:UIColorBlack}];
+        
+        NSRange range = [model.userName rangeOfString:self.mySearchController.searchBar.text];
+        if (range.location != NSNotFound)
+        {
+            [attributedString addAttributes:@{NSForegroundColorAttributeName:UIColorBlue} range:range];
+        }
+        
+        cell.textLabel.attributedText = attributedString;
+        UIImage *img = [UIImage ba_imageToRoundImageWithImage:UIImageMake(model.userImageUrl)];
+        cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
+    }
+    
+    [cell updateCellAppearanceWithIndexPath:indexPath];
     
     return cell;
 }
@@ -73,6 +123,95 @@ static NSString * const cellID = @"DemoVC3Cell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return cellHeight;
+}
+
+#pragma mark - QMUISearchControllerDelegate
+- (void)searchController:(QMUISearchController *)searchController updateResultsForSearchString:(NSString *)searchString
+{
+    [self.searchResultsKeywordsArray removeAllObjects];
+    
+    for (DemoVC3_model *model in self.dataArray)
+    {
+        if ([model.userName qmui_includesString:searchString])
+        {
+            [self.searchResultsKeywordsArray addObject:model];
+        }
+    }
+
+    [searchController.tableView reloadData];
+    
+    if (self.searchResultsKeywordsArray.count == 0)
+    {
+        [searchController showEmptyViewWithText:@"没有匹配结果！" detailText:nil buttonTitle:nil buttonAction:NULL];
+    }
+    else
+    {
+        [searchController hideEmptyView];
+    }
+}
+
+- (void)willPresentSearchController:(QMUISearchController *)searchController
+{
+    [QMUIHelper renderStatusBarStyleDark];
+}
+
+- (void)willDismissSearchController:(QMUISearchController *)searchController
+{
+    BOOL oleStatusBarLight = NO;
+    if ([self respondsToSelector:@selector(shouldSetStatusBarStyleLight)])
+    {
+        oleStatusBarLight = [self shouldSetStatusBarStyleLight];
+    }
+    if (oleStatusBarLight)
+    {
+        [QMUIHelper renderStatusBarStyleLight];
+    }
+    else
+    {
+        [QMUIHelper renderStatusBarStyleDark];
+    }
+}
+
+#pragma mark - setter / getter
+- (NSMutableArray <DemoVC3_model *> *)searchResultsKeywordsArray
+{
+	if(_searchResultsKeywordsArray == nil)
+    {
+		_searchResultsKeywordsArray = [[NSMutableArray <DemoVC3_model *> alloc] init];
+	}
+	return _searchResultsKeywordsArray;
+}
+
+- (NSMutableArray <DemoVC3_model *> *)dataArray
+{
+	if(_dataArray == nil)
+    {
+		_dataArray = [[NSMutableArray <DemoVC3_model *> alloc] init];
+        
+        NSArray *iconImageNamesArray = @[@"icon0.jpg",
+                                         @"icon1.jpg",
+                                         @"icon2.jpg",
+                                         @"icon3.jpg",
+                                         @"icon4.jpg",
+                                         @"icon2.jpg",
+                                         ];
+        
+        NSArray *namesArray = @[@"博爱",
+                                @"boai",
+                                @"小明",
+                                @"陆晓峰",
+                                @"石少庸是小明的老师",
+                                @"石少庸"];
+        for (NSInteger i = 0; i < 50; i ++)
+        {
+            DemoVC3_model *model = [[DemoVC3_model alloc] init];
+            model.userImageUrl = iconImageNamesArray[ba_randomNumber(6)];
+            model.userName = namesArray[ba_randomNumber(6)];
+
+            [self.dataArray addObject:model];
+        }
+	}
+	return _dataArray;
 }
 
 @end

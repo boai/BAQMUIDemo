@@ -10,7 +10,7 @@
 
 @interface DemoVC3_model : NSObject
 
-@property (nonatomic, copy) NSString *userImage;
+@property (nonatomic, copy) NSString *userImageUrl;
 @property (nonatomic, copy) NSString *userName;
 
 @end
