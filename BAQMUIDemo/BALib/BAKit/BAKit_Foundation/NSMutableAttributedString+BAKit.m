@@ -52,7 +52,7 @@
  * Email  : 137361770@qq.com
  * GitHub : https://github.com/boai
  * 博客园  : http://www.cnblogs.com/boai/
- * 博客    : http://boai.github.io
+ * 博客    : http://boaihome.com
  * 简书    : http://www.jianshu.com/users/95c9800fdf47/latest_articles
  * 简书专题 : http://www.jianshu.com/collection/072d578bf782
  
