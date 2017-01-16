@@ -83,19 +83,15 @@ static NSString * const cellID = @"DemoVC3Cell";
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    
+    DemoVC3_model *model = nil;
     if (tableView == self.tableView)
     {
-        DemoVC3_model *model = self.dataArray[indexPath.row];
-
+        model = self.dataArray[indexPath.row];
         cell.textLabel.text = model.userName;
-        UIImage *img = [UIImage ba_imageToRoundImageWithImage:UIImageMake(model.userImageUrl)];
-        cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
-        
     }
     else
     {
-        DemoVC3_model *model = self.searchResultsKeywordsArray[indexPath.row];
+        model = self.searchResultsKeywordsArray[indexPath.row];
 
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:model.userName attributes:@{NSForegroundColorAttributeName:UIColorBlack}];
         
@@ -104,11 +100,11 @@ static NSString * const cellID = @"DemoVC3Cell";
         {
             [attributedString addAttributes:@{NSForegroundColorAttributeName:UIColorBlue} range:range];
         }
-        
         cell.textLabel.attributedText = attributedString;
-        UIImage *img = [UIImage ba_imageToRoundImageWithImage:UIImageMake(model.userImageUrl)];
-        cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
     }
+    
+    UIImage *img = [UIImage ba_imageToRoundImageWithImage:UIImageMake(model.userImageUrl)];
+    cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
     
     [cell updateCellAppearanceWithIndexPath:indexPath];
     
