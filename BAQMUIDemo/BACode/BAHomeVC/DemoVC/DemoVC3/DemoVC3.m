@@ -207,7 +207,15 @@ static NSString * const cellID = @"DemoVC3Cell";
     NSUInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
 
-    DemoVC3_model *model = self.sectionArray[section][row];
+    DemoVC3_model *model = nil;
+    if (tableView == self.tableView)
+    {
+        model = self.sectionArray[section][row];
+    }
+    else
+    {
+        model = self.searchResultsKeywordsArray[row];
+    }
     [self ba_showAlertWithModel:model];
 }
 
@@ -325,19 +333,15 @@ static NSString * const cellID = @"DemoVC3Cell";
     {
 		_dataArray = [[NSMutableArray <DemoVC3_model *> alloc] init];
         
-        NSArray *iconImageNamesArray = @[@"icon0.jpg",
-                                         @"icon1.jpg",
-                                         @"icon2.jpg",
+        NSArray *iconImageNamesArray = @[@"0.jpg",
+                                         @"1.jpg",
+                                         @"2.jpg",
                                          @"icon3.jpg",
                                          @"icon4.jpg",
-                                         @"icon0.jpg",
-                                         @"icon1.jpg",
-                                         @"icon2.jpg",
-                                         @"icon3.jpg",
-                                         @"icon4.jpg",
-                                         @"icon0.jpg"
+                                         @"5.jpg",
+                                         @"6.jpg",
+                                         @"7.jpg",
                                          ];
-        
         NSArray *namesArray = @[@"博爱",
                                 @"boai",
                                 @"小明",
@@ -348,8 +352,14 @@ static NSString * const cellID = @"DemoVC3Cell";
                                 @"Tom",
                                 @"Lucy",
                                 @"123",
-                                @"cydn"];
-        
+                                @"cydn",
+                                @"mami",
+                                @"888",
+                                @"zhangSan",
+                                @"王二",
+                                @"微信",
+                                @"张小龙"];
+
 //        for (NSInteger i = 0; i < 50; i ++)
 //        {
 //            DemoVC3_model *model = [[DemoVC3_model alloc] init];
@@ -358,10 +368,18 @@ static NSString * const cellID = @"DemoVC3Cell";
 //
 //            [self.dataArray addObject:model];
 //        }
+        NSMutableArray *iconArray = [NSMutableArray array];
         for (NSInteger i = 0; i < namesArray.count; i ++)
         {
+            if (iconImageNamesArray.count < namesArray.count)
+            {
+                for (NSInteger j = 0; j < iconImageNamesArray.count; j ++)
+                {
+                    [iconArray addObject:iconImageNamesArray[ba_randomNumber(iconImageNamesArray.count)]];
+                }
+            }
             DemoVC3_model *model = [[DemoVC3_model alloc] init];
-            model.userImageUrl = iconImageNamesArray[i];
+            model.userImageUrl = iconArray[i];
             model.userName = namesArray[i];
             
             [self.dataArray addObject:model];
