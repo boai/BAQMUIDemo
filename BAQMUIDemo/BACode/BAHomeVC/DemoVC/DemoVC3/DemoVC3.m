@@ -47,83 +47,34 @@ static NSString * const cellID = @"DemoVC3Cell";
     self.mySearchController.searchResultsDelegate = self;
     self.tableView.tableHeaderView = self.mySearchController.searchBar;
     
-//    NSMutableArray *namesArray = @[].mutableCopy;
-//    for (DemoVC3_model *model in self.dataArray)
-//    {
-//        [namesArray addObject:model.userName];
-//    }
-    
-//    /*! 索引 */
-//    self.indexArray = [BAKit_ChineseString ba_chineseStringIndexArray:[namesArray mutableCopy]];
-//    /*! 排序后的联系人数组 */
-//    self.letterResultArr = [BAKit_ChineseString ba_chineseStringLetterSortArray:namesArray];
-    
     [self getSectionData];
 }
 
 - (void)getSectionData
 {
-    UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
+    NSDictionary *dict = [BAKit_LocalizedIndexedCollation ba_localizedWithDataArray:self.dataArray localizedNameSEL:@selector(userName)];
+    self.indexArray   = dict[kBALocalizedIndexArrayKey];
+    self.sectionArray = dict[kBALocalizedGroupArrayKey];
     
-    /*! create a temp sectionArray */
-    NSUInteger numberOfSections = [[collation sectionTitles] count];
-    NSMutableArray *newSectionArray = @[].mutableCopy;
-    
-    for (NSInteger index = 0; index < numberOfSections; index++)
+    NSMutableArray *tempModel = [[NSMutableArray alloc] init];
+    NSArray *dicts = @[@{@"userName" : @"新的朋友",
+                         @"userImageUrl" : @"plugins_FriendNotify"},
+                       @{@"userName" : @"群聊",
+                         @"userImageUrl" : @"add_friend_icon_addgroup"},
+                       @{@"userName" : @"标签",
+                         @"userImageUrl" : @"Contact_icon_ContactTag"},
+                       @{@"userName" : @"公众号",
+                         @"userImageUrl" : @"add_friend_icon_offical"}];
+    for (NSDictionary *dict in dicts)
     {
-        [newSectionArray addObject:[[NSMutableArray alloc] init]];
-    }
-    
-    /*! insert Persons info into newSectionArray */
-    for (DemoVC3_model *model in self.dataArray)
-    {
-        NSUInteger sectionIndex = [collation sectionForObject:model collationStringSelector:@selector(userName)];
-        [newSectionArray[sectionIndex] addObject:model];
-    }
-    
-    /*! sort the person of each section */
-    for (NSInteger index = 0; index < numberOfSections; index++)
-    {
-        NSMutableArray *personsForSection = newSectionArray[index];
-        NSArray *sortedPersonsForSection = [collation sortedArrayFromArray:personsForSection collationStringSelector:@selector(userName)];
-        newSectionArray[index] = sortedPersonsForSection;
-    }
-    
-    NSMutableArray *temp = [NSMutableArray array];
-    
-    [newSectionArray enumerateObjectsUsingBlock:^(NSArray *array, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        if (array.count == 0)
-        {
-            [temp addObject:array];
-        }
-        else
-        {
-            [self.indexArray addObject:[collation sectionTitles][idx]];
-        }
-    }];
-    [newSectionArray removeObjectsInArray:temp];
-
-    NSMutableArray *tempModel = [NSMutableArray new];
-    NSArray *dicts = @[@{@"name" : @"新的朋友",
-                         @"imageName" : @"plugins_FriendNotify"},
-                       @{@"name" : @"群聊",
-                         @"imageName" : @"add_friend_icon_addgroup"},
-                       @{@"name" : @"标签",
-                         @"imageName" : @"Contact_icon_ContactTag"},
-                       @{@"name" : @"公众号",
-                         @"imageName" : @"add_friend_icon_offical"}];
-    for (NSDictionary *dict in dicts) {
         DemoVC3_model *model = [DemoVC3_model new];
-        model.userName = dict[@"name"];
-        model.userImageUrl = dict[@"imageName"];
+        model.userName = dict[@"userName"];
+        model.userImageUrl = dict[@"userImageUrl"];
         [tempModel addObject:model];
     }
     
-    [newSectionArray insertObject:tempModel atIndex:0];
+    [self.sectionArray insertObject:tempModel atIndex:0];
     [self.indexArray insertObject:@"" atIndex:0];
-    
-    self.sectionArray = newSectionArray;
 }
 
 #pragma mark - QMUITableView Delegate & DataSource
@@ -165,7 +116,6 @@ static NSString * const cellID = @"DemoVC3Cell";
     if (!cell)
     {
         cell = [[QMUITableViewCell alloc] initForTableView:self.tableView  withReuseIdentifier:cellID];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     NSUInteger section = indexPath.section;
@@ -360,14 +310,6 @@ static NSString * const cellID = @"DemoVC3Cell";
                                 @"微信",
                                 @"张小龙"];
 
-//        for (NSInteger i = 0; i < 50; i ++)
-//        {
-//            DemoVC3_model *model = [[DemoVC3_model alloc] init];
-//            model.userImageUrl = iconImageNamesArray[ba_randomNumber(6)];
-//            model.userName = namesArray[ba_randomNumber(6)];
-//
-//            [self.dataArray addObject:model];
-//        }
         NSMutableArray *iconArray = [NSMutableArray array];
         for (NSInteger i = 0; i < namesArray.count; i ++)
         {

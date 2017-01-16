@@ -63,6 +63,7 @@
 #import "BAKit_Animation.h"
 #import "BANetManager.h"
 #import "BAKit_ChineseString.h"
+#import "BAKit_localizedIndexedCollation.h"
 
 
 #endif /* BACustom_h */
