@@ -37,24 +37,24 @@ static NSString * const cellID = @"DemoVC3Cell";
 - (void)setupUI
 {
 //    self.tableView.backgroundColor = UIColorWhite;
-    self.tableView.separatorInset = tableViewEdgeInsets;
+    
+//    self.tableView.separatorInset = tableViewEdgeInsets;
     
     self.mySearchController = [[QMUISearchController alloc] initWithContentsViewController:self];
     self.mySearchController.searchResultsDelegate = self;
-    self.mySearchController.tableView.separatorInset = tableViewEdgeInsets;
+//    self.mySearchController.tableView.separatorInset = tableViewEdgeInsets;
     self.tableView.tableHeaderView = self.mySearchController.searchBar;
-
 }
 
 #pragma mark - QMUITableView Delegate & DataSource
-- (instancetype)initWithStyle:(UITableViewStyle)style
-{
-    if (self = [super initWithStyle:style])
-    {
-        
-    }
-    return self;
-}
+//- (instancetype)initWithStyle:(UITableViewStyle)style
+//{
+//    if (self = [super initWithStyle:style])
+//    {
+//        
+//    }
+//    return self;
+//}
 
 
 - (BOOL)shouldShowSearchBarInTableView:(QMUITableView *)tableView
@@ -78,11 +78,10 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    QMUITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID ];
+    QMUITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID ];
     if (!cell)
     {
-        cell = [[QMUITableViewCell alloc] initForTableView:self.tableView withStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell = [[QMUITableViewCell alloc] initForTableView:self.tableView  withReuseIdentifier:cellID];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
@@ -106,8 +105,10 @@ static NSString * const cellID = @"DemoVC3Cell";
         cell.textLabel.attributedText = attributedString;
     }
     
-    UIImage *img = [UIImage ba_imageToRoundImageWithImage:UIImageMake(model.userImageUrl)];
-    cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
+    cell.imageView.image = [UIImage ba_imageToChangeCellRoundImageViewSizeWithCell:cell image:UIImageMake(@"icon1.jpg") imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
+    cell.imageEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
+    cell.textLabelEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
+    cell.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
     
     [cell updateCellAppearanceWithIndexPath:indexPath];
     
@@ -192,7 +193,12 @@ static NSString * const cellID = @"DemoVC3Cell";
                                          @"icon2.jpg",
                                          @"icon3.jpg",
                                          @"icon4.jpg",
+                                         @"icon0.jpg",
+                                         @"icon1.jpg",
                                          @"icon2.jpg",
+                                         @"icon3.jpg",
+                                         @"icon4.jpg",
+                                         @"icon0.jpg"
                                          ];
         
         NSArray *namesArray = @[@"博爱",
@@ -200,7 +206,13 @@ static NSString * const cellID = @"DemoVC3Cell";
                                 @"小明",
                                 @"陆晓峰",
                                 @"石少庸是小明的老师",
-                                @"石少庸"];
+                                @"石少庸",
+                                @"Alix",
+                                @"Tom",
+                                @"Lucy",
+                                @"123",
+                                @"cydn"];
+        
 //        for (NSInteger i = 0; i < 50; i ++)
 //        {
 //            DemoVC3_model *model = [[DemoVC3_model alloc] init];
@@ -209,7 +221,7 @@ static NSString * const cellID = @"DemoVC3Cell";
 //
 //            [self.dataArray addObject:model];
 //        }
-        for (NSInteger i = 0; i < 6; i ++)
+        for (NSInteger i = 0; i < namesArray.count; i ++)
         {
             DemoVC3_model *model = [[DemoVC3_model alloc] init];
             model.userImageUrl = iconImageNamesArray[i];
