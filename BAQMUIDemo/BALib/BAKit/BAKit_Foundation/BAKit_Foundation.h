@@ -55,7 +55,7 @@
  
  *********************************************************************************
  
- */
+ */ //  博爱 Foundation 类封装
 
 #ifndef BAKit_Foundation_h
 #define BAKit_Foundation_h
