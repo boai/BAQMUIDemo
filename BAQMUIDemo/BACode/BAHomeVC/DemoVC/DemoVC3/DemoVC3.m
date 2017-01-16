@@ -22,6 +22,13 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 @property (nonatomic, strong) NSMutableArray <DemoVC3_model *>*searchResultsKeywordsArray;
 
+/*! 索引 */
+@property (nonatomic, strong) NSMutableArray <NSString *>*indexArray;
+@property (nonatomic, strong) NSMutableArray *sectionArray;
+
+/*! 设置每个section下的cell内容 */
+//@property (nonatomic, strong) NSMutableArray <DemoVC3_model *>*letterResultArr;
+
 @property (nonatomic, strong) QMUISearchController *mySearchController;
 
 @end
@@ -36,14 +43,68 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 - (void)setupUI
 {
-//    self.tableView.backgroundColor = UIColorWhite;
-    
-//    self.tableView.separatorInset = tableViewEdgeInsets;
-    
     self.mySearchController = [[QMUISearchController alloc] initWithContentsViewController:self];
     self.mySearchController.searchResultsDelegate = self;
-//    self.mySearchController.tableView.separatorInset = tableViewEdgeInsets;
     self.tableView.tableHeaderView = self.mySearchController.searchBar;
+    
+//    NSMutableArray *namesArray = @[].mutableCopy;
+//    for (DemoVC3_model *model in self.dataArray)
+//    {
+//        [namesArray addObject:model.userName];
+//    }
+    
+//    /*! 索引 */
+//    self.indexArray = [BAKit_ChineseString ba_chineseStringIndexArray:[namesArray mutableCopy]];
+//    /*! 排序后的联系人数组 */
+//    self.letterResultArr = [BAKit_ChineseString ba_chineseStringLetterSortArray:namesArray];
+    
+    [self getSectionData];
+}
+
+- (void)getSectionData
+{
+    UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
+    
+    /*! create a temp sectionArray */
+    NSUInteger numberOfSections = [[collation sectionTitles] count];
+    NSMutableArray *newSectionArray = @[].mutableCopy;
+    
+    for (NSInteger index = 0; index < numberOfSections; index++)
+    {
+        [newSectionArray addObject:[[NSMutableArray alloc] init]];
+    }
+    
+    /*! insert Persons info into newSectionArray */
+    for (DemoVC3_model *model in self.dataArray)
+    {
+        NSUInteger sectionIndex = [collation sectionForObject:model collationStringSelector:@selector(userName)];
+        [newSectionArray[sectionIndex] addObject:model];
+    }
+    
+    /*! sort the person of each section */
+    for (NSInteger index = 0; index < numberOfSections; index++)
+    {
+        NSMutableArray *personsForSection = newSectionArray[index];
+        NSArray *sortedPersonsForSection = [collation sortedArrayFromArray:personsForSection collationStringSelector:@selector(userName)];
+        newSectionArray[index] = sortedPersonsForSection;
+    }
+    
+    NSMutableArray *temp = [NSMutableArray array];
+    
+    [newSectionArray enumerateObjectsUsingBlock:^(NSArray *array, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        if (array.count == 0)
+        {
+            [temp addObject:array];
+        }
+        else
+        {
+            [self.indexArray addObject:[collation sectionTitles][idx]];
+        }
+    }];
+    [newSectionArray removeObjectsInArray:temp];
+
+    self.sectionArray = newSectionArray;
 }
 
 #pragma mark - QMUITableView Delegate & DataSource
@@ -56,7 +117,6 @@ static NSString * const cellID = @"DemoVC3Cell";
 //    return self;
 //}
 
-
 - (BOOL)shouldShowSearchBarInTableView:(QMUITableView *)tableView
 {
     return YES;
@@ -64,14 +124,14 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.indexArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.tableView)
     {
-        return self.dataArray.count;
+        return [self.sectionArray[section] count];
     }
     return self.searchResultsKeywordsArray.count;
 }
@@ -85,10 +145,12 @@ static NSString * const cellID = @"DemoVC3Cell";
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
+    NSUInteger section = indexPath.section;
+    NSUInteger row = indexPath.row;
     DemoVC3_model *model = nil;
     if (tableView == self.tableView)
     {
-        model = self.dataArray[indexPath.row];
+        model = self.sectionArray[section][row];
         cell.textLabel.text = model.userName;
     }
     else
@@ -123,6 +185,18 @@ static NSString * const cellID = @"DemoVC3Cell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return cellHeight;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSLog(@"section : %@", self.sectionArray);
+    return self.indexArray[section];
+}
+
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    NSLog(@"title : %@", self.indexArray);
+    return self.indexArray;
 }
 
 #pragma mark - QMUISearchControllerDelegate
@@ -231,6 +305,24 @@ static NSString * const cellID = @"DemoVC3Cell";
         }
 	}
 	return _dataArray;
+}
+
+- (NSMutableArray <NSString *> *)indexArray
+{
+	if(_indexArray == nil)
+    {
+		_indexArray = [[NSMutableArray <NSString *> alloc] init];
+	}
+	return _indexArray;
+}
+
+- (NSMutableArray *)sectionArray
+{
+	if(_sectionArray == nil)
+    {
+		_sectionArray = [[NSMutableArray alloc] init];
+	}
+	return _sectionArray;
 }
 
 @end

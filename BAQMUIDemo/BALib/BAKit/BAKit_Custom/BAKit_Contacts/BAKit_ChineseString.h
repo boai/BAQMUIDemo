@@ -57,12 +57,39 @@
  
  */
 
-#ifndef BACustom_h
-#define BACustom_h
+#import <Foundation/Foundation.h>
+#import "pinyin.h"
 
-#import "BAKit_Animation.h"
-#import "BANetManager.h"
-#import "BAKit_ChineseString.h"
+@interface BAKit_ChineseString : NSObject
 
+@property (nonatomic, strong) NSString *string;
+@property (nonatomic, strong) NSString *pinYin;
 
-#endif /* BACustom_h */
+/*!
+ *  返回排序后的tableview右边的索引indexArray
+ *
+ *  @param stringArr stringArr
+ *
+ *  @return 返回排序后的tableview右边的索引indexArray
+ */
++ (NSMutableArray *)ba_chineseStringIndexArray:(NSArray*)stringArr;
+
+/*!
+ *  返回排序后的联系人数组
+ *
+ *  @param stringArr stringArr
+ *
+ *  @return 返回排序后的联系人数组
+ */
++ (NSMutableArray *)ba_chineseStringLetterSortArray:(NSArray*)stringArr;
+
+/*!
+ *  返回一组字母排序数组(中英混排)
+ *
+ *  @param stringArr stringArr
+ *
+ *  @return 返回一组字母排序数组(中英混排)
+ */
++ (NSMutableArray *)ba_chineseStringSortArray:(NSArray*)stringArr;
+
+@end
