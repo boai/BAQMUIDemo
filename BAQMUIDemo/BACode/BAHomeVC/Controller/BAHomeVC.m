@@ -10,7 +10,7 @@
 #import "BALaunchADNet.h"
 #import "YYModel.h"
 
-@interface BAHomeVC () <UITableViewDelegate, UITableViewDataSource>
+@interface BAHomeVC () <QMUITableViewDelegate, QMUITableViewDataSource>
 
 @property (nonatomic, strong) QMUITableView *tableView;
 
