@@ -124,7 +124,11 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.indexArray.count;
+    if (tableView == self.tableView)
+    {
+        return self.indexArray.count;
+    }
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -189,13 +193,15 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    NSLog(@"section : %@", self.sectionArray);
-    return self.indexArray[section];
+    if (tableView == self.tableView)
+    {
+        return self.indexArray[section];
+    }
+    return nil;
 }
 
 - (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    NSLog(@"title : %@", self.indexArray);
     return self.indexArray;
 }
 
