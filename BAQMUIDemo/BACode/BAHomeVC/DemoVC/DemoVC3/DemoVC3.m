@@ -11,6 +11,9 @@
 
 static NSString * const cellID = @"DemoVC3Cell";
 
+#define cellHeight        50
+#define cellImageViewSize cellHeight * 0.8
+
 @interface DemoVC3 ()
 
 @end
@@ -57,7 +60,7 @@ static NSString * const cellID = @"DemoVC3Cell";
     
     cell.textLabel.text = @"boai";
     UIImage *img = [UIImage ba_imageToRoundImageWithImage:UIImageMake(@"icon1.jpg")];
-    cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(40, 40)];
+    cell.imageView.image = [UIImage ba_imageToChangeCellNormalImageViewSizeWithCell:cell image:img imageSize:CGSizeMake(cellImageViewSize, cellImageViewSize)];
     
     return cell;
 }
@@ -69,9 +72,7 @@ static NSString * const cellID = @"DemoVC3Cell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+    return cellHeight;
 }
-
-
 
 @end

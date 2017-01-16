@@ -109,9 +109,8 @@
                                                    image:(UIImage *)image
                                                    imageSize:(CGSize)imageSize
 {
-    CGSize itemSize = imageSize;
-    UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0);
-    CGRect imageRect = CGRectMake(0, 0, itemSize.width, itemSize.height);
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
+    CGRect imageRect = CGRectMake(0, 0, imageSize.width, imageSize.height);
     [image drawInRect:imageRect];
     cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
