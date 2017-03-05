@@ -10,7 +10,7 @@
 #import "DemoVC1_model.h"
 #import "DemoVC1_cell.h"
 
-@interface DemoVC1 () <UITableViewDelegate, UITableViewDataSource>
+@interface DemoVC1 () <QMUITableViewDelegate, QMUITableViewDataSource>
 
 @property (nonatomic, strong) QMUITableView *tableView;
 @property (nonatomic, strong) NSMutableArray <DemoVC1_model *>*dataArray;
@@ -132,7 +132,7 @@
                                @"2017-01-10 18:09:01",
                                @"2017-01-12 11:18:01"];
         
-        for (NSInteger i = 0; i < 100; i ++)
+        for (NSInteger i = 0; i < 50; i ++)
         {
             DemoVC1_model *model = [[DemoVC1_model alloc] init];
             model.userImageUrl = iconImageNamesArray[ba_randomNumber(5)];

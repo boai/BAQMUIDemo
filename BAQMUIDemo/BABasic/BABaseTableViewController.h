@@ -10,4 +10,6 @@
 
 @interface BABaseTableViewController : QMUICommonTableViewController
 
+- (void)setupUI;
+
 @end

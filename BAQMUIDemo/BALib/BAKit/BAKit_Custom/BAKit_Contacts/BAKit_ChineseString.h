@@ -55,18 +55,41 @@
  
  *********************************************************************************
  
- */ //  博爱 Foundation 类封装
+ */ //  按首字母或者汉字拼音首字母分组排序索引工具类
 
-#ifndef BAKit_Foundation_h
-#define BAKit_Foundation_h
+#import <Foundation/Foundation.h>
+#import "pinyin.h"
 
-#import "NSDate+BAKit.h"
-#import "NSDateFormatter+BAKit.h"
+@interface BAKit_ChineseString : NSObject
 
-#import "NSString+Time.h"
-#import "NSMutableAttributedString+BAKit.h"
+@property (nonatomic, strong) NSString *string;
+@property (nonatomic, strong) NSString *pinYin;
 
-#import "NSObject+BARunTime.h"
+/*!
+ *  返回排序后的tableview右边的索引indexArray
+ *
+ *  @param stringArr stringArr
+ *
+ *  @return 返回排序后的tableview右边的索引indexArray
+ */
++ (NSMutableArray *)ba_chineseStringIndexArray:(NSArray*)stringArr;
 
+/*!
+ *  返回排序后的联系人数组
+ *
+ *  @param stringArr stringArr
+ *
+ *  @return 返回排序后的联系人数组
+ */
++ (NSMutableArray *)ba_chineseStringLetterSortArray:(NSArray*)stringArr;
 
-#endif /* BAKit_Foundation_h */
+/*!
+ *  返回一组字母排序数组(中英混排)
+ *
+ *  @param stringArr stringArr
+ *
+ *  @return 返回一组字母排序数组(中英混排)
+ */
++ (NSMutableArray *)ba_chineseStringSortArray:(NSArray*)stringArr;
+
+@end

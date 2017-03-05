@@ -55,7 +55,7 @@
  
  *********************************************************************************
  
- */
+ */ //  博爱 UIKit 类封装
 
 #ifndef BAKit_UIKit_h
 #define BAKit_UIKit_h
@@ -67,6 +67,7 @@
 #import "UIImageEffects.h"
 #import "UIImage+Render.h"
 
+#import "UIAlertController+Blocks.h"
 
 
 

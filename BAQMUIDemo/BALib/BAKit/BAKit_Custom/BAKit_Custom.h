@@ -55,13 +55,15 @@
  
  *********************************************************************************
  
- */
+ */ //  博爱自定义封装
 
 #ifndef BACustom_h
 #define BACustom_h
 
 #import "BAKit_Animation.h"
 #import "BANetManager.h"
+#import "BAKit_ChineseString.h"
+#import "BAKit_localizedIndexedCollation.h"
 
 
 #endif /* BACustom_h */
