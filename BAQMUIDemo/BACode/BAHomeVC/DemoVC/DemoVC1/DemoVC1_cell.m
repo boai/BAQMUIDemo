@@ -70,7 +70,6 @@ static CGFloat const kContentMargin_bottom   = 6;
     self.contentLabel.attributedText = [self ba_attributedStringWithText:model.content lineHeight:25];
     
     NSDateFormatter *formatter       = [NSDateFormatter ba_defaultDateFormatter];
-    
     NSDate *date                     = [formatter dateFromString:model.time];
     self.timeLabel.text              = [date ba_dateFormattedDateDescription];
 

@@ -97,6 +97,7 @@
         _tableView.dataSource = self;
         
         [self.view addSubview:_tableView];
+        
     }
     return _tableView;
 }
@@ -144,7 +145,6 @@
     }
     return _dataArray;
 }
-
 
 @end
 

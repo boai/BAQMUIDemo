@@ -232,6 +232,7 @@
 {
     UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:image tag:tag];
     tabBarItem.selectedImage = selectedImage;
+    /*! 自定义每个 title 的字体颜色 */
     [tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : selectedTitleColor} forState:UIControlStateSelected];
     
     return tabBarItem;

@@ -12,7 +12,7 @@
 
 @interface BAHomeVC () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) QMUITableView *tableView;
+@property (nonatomic, strong) QMUITableView   *tableView;
 
 @property (nonatomic, strong) NSMutableArray  *titlesArray;
 @property (nonatomic, strong) NSMutableArray  *classNamesArray;
@@ -55,8 +55,9 @@
 
 - (void)test
 {
+//    [self.view showProgress:"加载中..."];
     [[BALaunchADNet sharedBALaunchADNet] ba_getVideosWithStartIndex:1 completionHandle:^(BAVideoModel *data, NSError *error) {
-        
+//        [hide...];
         if (data)
         {
             NSLog(@"dat1:  %@", data.videoHomeSid);
